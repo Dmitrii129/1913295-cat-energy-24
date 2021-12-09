@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html class="page" lang="ru">
+
+<head>
+    <meta charset="utf-8">
+    <title>HTML Academy: Кэт энерджи</title>
+    <link rel="icon" sizes="32x32" href="/source/img/cat-logo.svg" type="image/svg" />
+    <link rel="stylesheet" href="../source/css/style.css" />
+</head>
+
+<body class="page__body">
+    <header class="page-header">
+        <img class="page-header__image" src="../source/img/cat-logo.svg" width="33" height="38" alt="Кот">
+        <a class="page-header__logo" href="#"> <img src="../source/img/logo-energy.svg" width="101" height="18"
+                alt="Энергия кота">
+        </a>
+        <nav class="main-nav">
+            <button class="main-nav__toggle" type="button"><span class="visually-hidden">Открыть меню</span></button>
+            <div class="main-nav__wrapper">
+                <ul class="main-nav__list navigation-list">
+                    <li class="navigation-list__item"><a href="#">Главная</a></li>
+                    <li class="navigation-list__item"><a href="product.html">Каталог продукции</a></li>
+                    <li class="navigation-list__item"><a href="program.html">Подбор программы</a></li>
+                </ul>
+            </div>
+        </nav>
+    </header>
+    <main class="form">
+        <section class="prog-param">
+            <h1 class="prog-param__title">Подбор программы</h1>
+            <p class="prog-param__subtitle">Заполните анкету, и мы подберем программу питания для вашего кота</p>
+            <span class="prag-param__label">имя:*</span>
+            <input class="prog-param__field" type="text" value="барсик" name="name" required />
+
+            <span class="prag-param__label">вес(кг):*</span>
+            <input class="prog-param__field" type="text" value="7" name="weight" required />
+
+            <span class="prag-param__label">возраст(лет):</span>
+            <input class="prog-param__field" type="text" name="age" value="7" />
+        </section>
+        <section class="kit">
+            <h3 class="visually-hidden" hidden>выбор программы</h3>
+            <ul class="kit__list">
+                <li class="kit__label">
+                    <input type="radio" class="programm__field" name="weight-loss" checked />
+                    <span class="kit__box">Похудение</span>
+                </li>
+                <li class="kit__label">
+                    <input type="radio" class="kit__field" name="weight-gain" />
+                    <span class="kit__box">Набор массы</span>
+                </li>
+                <li class="kit__label">
+                    <input type="radio" class="kit__field" name="advice" />
+                    <span class="kit__box">Не знаю(нужен ваш совет)</span>
+                </li>
+            </ul>
+        </section>
+        <section class="contact">
+            <h2 class="contact__title">контактные данные (владельца кота)</h2>
+            <span class="contact__label">E-mail:*</span>
+            <input class="contact__email" name="mail" type="text" value="kuklachev@gmail.com" required />
+            <span class="contact__label">Телефон:*</span>
+            <input class="contact__tel" type="text" name="tel" value="8(960)900-60-90" required />
+        </section>
+        <section class="commit">
+            <h2 class="commit__title">Комментарий</h2>
+            <textarea class="commit__text" placeholder="расскажите обо всех повадках вашего кота"></textarea>
+        </section>
+        <section class="dop">
+            <h2 class="dop__title">Дополнительно</h2>
+            <ul class="dop__list">
+                <li class="dop__control">
+                    <input class="visually-hidden dop__box" type="checkbox" name="wi-fi" checked />
+                    <span class="dop__mark"></span>
+                    <span class="dop__label">Сахарозаменитель</span>
+                </li>
+                <li class="dop__control">
+                    <input class="visually-hidden dop__box" type="checkbox" name="wi-fi" />
+                    <span class="dop__mark"></span>
+                    <span class="dop__label">Питьевая вода</span>
+                </li>
+                <li class="dop__control">
+                    <input class="visually-hidden dop__box" type="checkbox" name="wi-fi" />
+                    <span class="dop__mark"></span>
+                    <span class="dop__label">Молоко</span>
+                </li>
+                <li class="dop__control">
+                    <input class="visually-hidden dop__box" type="checkbox" name="wi-fi" />
+                    <span class="dop__mark"></span>
+                    <span class="dop__label">Витамины</span>
+                </li>
+            </ul>
+            <button class="dop__button-apply" type="submit">Отправить заявку</button>
+            <p class="dop__text">*-Обязательные поля</p>
+        </section>
+        <section class="page-map">
+            <h3 class="page-map__title">Приглашаем к сотрудничеству диллеров!</h3>
+            <p class="page-map__address">ул. Большая Конюшенная, д. 19/8 Санкт-Петербург</p>
+            <img class="page-map__image" src="../source/img/Rectangle.jpg " width="320" height="362" alt="Карта">
+        </section>
+    </main>
+
+    <footer class="footer">
+        <img class="footer__image" src="../source/img/footer-logo.svg" width="128" height="24" alt="Энергия кота">
+        <ul class="footer__socials">
+            <li class="footer__item"><img class="footer__social-vk" src="../source/img/icon_vkontakte.svg"
+                    alt="вконтакте" width="23" height="16"></li>
+            <li class="footer__item"><img class="footer__social-inst" src="../source/img/icon_instagram.svg"
+                    alt="инстаграмм" width="16" height="16"></li>
+            <li class="footer__item"><img class="footer__social-fb" src="../source/img/icon_facebook.svg" alt="фейсбук"
+                    width="22" height="22"></li>
+        </ul>
+        <div class="footer__copyright">
+            <p class="footer__academy">HTML Academy</p>
+            <img class="footer__image" src="../source/img/html-logo.svg" width="27" height="34" alt="Логотип">
+        </div>
+    </footer>
+
+</body>
+
+</html>
