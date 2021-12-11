@@ -27,52 +27,60 @@
     </header>
     <main class="form">
         <section class="program-options">
+            <h1 class="program-options__title">Подбор программы</h1>
+            <p class="program-options__subtitle">Заполните анкету, и мы подберем программу питания для вашего кота
+            </p>
             <form class="program-otions__sorting" action="https://echo.htmlacademy.ru/" method="get">
-                <h1 class="program-options__title">Подбор программы</h1>
-                <p class="program-options__subtitle">Заполните анкету, и мы подберем программу питания для вашего кота
-                </p>
-                <span class="program-options__label">имя:*</span>
-                <input class="program-options__field" type="text" value="барсик" name="name" required />
-
-                <span class="program-options__label">вес(кг):*</span>
-                <input class="program-options__field" type="text" value="7" name="weight" required />
-
-                <span class="program-options__label">возраст(лет):</span>
-                <input class="program-options__field" type="text" name="age" value="7" />
-            </form>
-        </section>
-        <section class="kit">
-            <h3 class="visually-hidden" hidden>выбор программы</h3>
-            <ul class="kit__list">
-                <li class="kit__label">
-                    <input type="radio" class="programm__field" name="weight-loss" checked />
-                    <span class="kit__box">Похудение</span>
-                </li>
-                <li class="kit__label">
-                    <input type="radio" class="kit__field" name="weight-gain" />
-                    <span class="kit__box">Набор массы</span>
-                </li>
-                <li class="kit__label">
-                    <input type="radio" class="kit__field" name="advice" />
-                    <span class="kit__box">Не знаю(нужен ваш совет)</span>
-                </li>
-            </ul>
-        </section>
-        <section class="contact">
-            <h2 class="contact__title">контактные данные (владельца кота)</h2>
-            <span class="contact__label">E-mail:*</span>
-            <input class="contact__email" name="mail" type="text" value="kuklachev@gmail.com" required />
-            <span class="contact__label">Телефон:*</span>
-            <input class="contact__tel" type="text" name="tel" value="8(960)900-60-90" required />
-        </section>
-        <section class="commit">
-            <h2 class="commit__title">Комментарий</h2>
-            <textarea class="commit__text" placeholder="расскажите обо всех повадках вашего кота"></textarea>
-        </section>
-        <section class="dop">
-            <h2 class="visually-hidden" hidden>добавки</h2>
-            <form class="dop__filter" action="https://echo.htmlacademy.ru/" method="get">
-                <fieldset class="dop__options">
+                <fieldset class="program-options__info">
+                    <legend class="program-options visually-hidden">информация</legend>
+                    <div class="program-options__block">
+                        <label class="program-options__name">
+                            <span class="program-options__label">имя:*</span>
+                            <input class="program-options__field" type="text" value="барсик" name="name" required />
+                        </label>
+                        <label class="program-options__weight">
+                            <span class="program-options__label">вес(кг):*</span>
+                            <input class="program-options__field" type="text" value="7" name="weight" required />
+                        </label>
+                        <label class="program-options">
+                            <span class="program-options__label">возраст(лет):</span>
+                            <input class="program-options__field" type="text" name="age" value="7" />
+                        </label>
+                    </div>
+                </fieldset>
+                <fieldset class="kit">
+                    <legend class="visually-hidden" hidden>выбор программы</legend>
+                    <ul class="kit__list">
+                        <li class="kit__label">
+                            <input type="radio" class="programm__field" name="weight-loss" checked />
+                            <span class="kit__box">Похудение</span>
+                        </li>
+                        <li class="kit__label">
+                            <input type="radio" class="kit__field" name="weight-gain" />
+                            <span class="kit__box">Набор массы</span>
+                        </li>
+                        <li class="kit__label">
+                            <input type="radio" class="kit__field" name="advice" />
+                            <span class="kit__box">Не знаю(нужен ваш совет)</span>
+                        </li>
+                    </ul>
+                </fieldset>
+                <fieldset class="contact">
+                    <legend class="contact__title">контактные данные (владельца кота)</legend>
+                    <label class="contact__mail" <span class="contact__label">E-mail:*</span>
+                        <input class="contact__email" name="mail" type="text" value="kuklachev@gmail.com" required />
+                    </label>
+                    <label class="contact tel">
+                        <span class="contact__label">Телефон:*</span>
+                        <input class="contact__tel" type="text" name="tel" value="8(960)900-60-90" required />
+                    </label>
+                </fieldset>
+                <fieldset class="commit">
+                    <h2 class="commit__title">Комментарий</h2>
+                    <textarea class="commit__text" placeholder="расскажите обо всех повадках вашего кота"></textarea>
+                </fieldset>
+                <fieldset class="dop">
+                    <h2 class="visually-hidden" hidden>добавки</h2>
                     <legend class="dop__title">Дополнительно</legend>
                     <div class="dop__list">
                         <label class="dop__control">
@@ -95,11 +103,11 @@
                             <span class="dop__mark"></span>
                             <span class="dop__label">Витамины</span>
                         </label>
+                        <button class="dop__button-apply" type="submit">Отправить заявку</button>
                     </div>
                 </fieldset>
+                <p class="dop__text">*-Обязательные поля</p>
             </form>
-            <button class="dop__button-apply" type="submit">Отправить заявку</button>
-            <p class="dop__text">*-Обязательные поля</p>
         </section>
         <section class="page-map">
             <h3 class="page-map__title">Приглашаем к сотрудничеству диллеров!</h3>
