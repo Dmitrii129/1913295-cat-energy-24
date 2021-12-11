@@ -26,17 +26,20 @@
         </nav>
     </header>
     <main class="form">
-        <section class="prog-param">
-            <h1 class="prog-param__title">Подбор программы</h1>
-            <p class="prog-param__subtitle">Заполните анкету, и мы подберем программу питания для вашего кота</p>
-            <span class="prag-param__label">имя:*</span>
-            <input class="prog-param__field" type="text" value="барсик" name="name" required />
+        <section class="program-options">
+            <form class="program-otions__sorting" action="https://echo.htmlacademy.ru/" method="get">
+                <h1 class="program-options__title">Подбор программы</h1>
+                <p class="program-options__subtitle">Заполните анкету, и мы подберем программу питания для вашего кота
+                </p>
+                <span class="program-options__label">имя:*</span>
+                <input class="program-options__field" type="text" value="барсик" name="name" required />
 
-            <span class="prag-param__label">вес(кг):*</span>
-            <input class="prog-param__field" type="text" value="7" name="weight" required />
+                <span class="program-options__label">вес(кг):*</span>
+                <input class="program-options__field" type="text" value="7" name="weight" required />
 
-            <span class="prag-param__label">возраст(лет):</span>
-            <input class="prog-param__field" type="text" name="age" value="7" />
+                <span class="program-options__label">возраст(лет):</span>
+                <input class="program-options__field" type="text" name="age" value="7" />
+            </form>
         </section>
         <section class="kit">
             <h3 class="visually-hidden" hidden>выбор программы</h3>
@@ -67,36 +70,41 @@
             <textarea class="commit__text" placeholder="расскажите обо всех повадках вашего кота"></textarea>
         </section>
         <section class="dop">
-            <h2 class="dop__title">Дополнительно</h2>
-            <ul class="dop__list">
-                <li class="dop__control">
-                    <input class="visually-hidden dop__box" type="checkbox" name="wi-fi" checked />
-                    <span class="dop__mark"></span>
-                    <span class="dop__label">Сахарозаменитель</span>
-                </li>
-                <li class="dop__control">
-                    <input class="visually-hidden dop__box" type="checkbox" name="wi-fi" />
-                    <span class="dop__mark"></span>
-                    <span class="dop__label">Питьевая вода</span>
-                </li>
-                <li class="dop__control">
-                    <input class="visually-hidden dop__box" type="checkbox" name="wi-fi" />
-                    <span class="dop__mark"></span>
-                    <span class="dop__label">Молоко</span>
-                </li>
-                <li class="dop__control">
-                    <input class="visually-hidden dop__box" type="checkbox" name="wi-fi" />
-                    <span class="dop__mark"></span>
-                    <span class="dop__label">Витамины</span>
-                </li>
-            </ul>
+            <h2 class="visually-hidden" hidden>добавки</h2>
+            <form class="dop__filter" action="https://echo.htmlacademy.ru/" method="get">
+                <fieldset class="dop__options">
+                    <legend class="dop__title">Дополнительно</legend>
+                    <div class="dop__list">
+                        <label class="dop__control">
+                            <input class="visually-hidden dop__box" type="checkbox" name="wi-fi" checked />
+                            <span class="dop__mark"></span>
+                            <span class="dop__label">Сахарозаменитель</span>
+                        </label>
+                        <label class="dop__control">
+                            <input class="visually-hidden dop__box" type="checkbox" name="wi-fi" />
+                            <span class="dop__mark"></span>
+                            <span class="dop__label">Питьевая вода</span>
+                        </label>
+                        <label class="dop__control">
+                            <input class="visually-hidden dop__box" type="checkbox" name="wi-fi" />
+                            <span class="dop__mark"></span>
+                            <span class="dop__label">Молоко</span>
+                        </label>
+                        <label class="dop__control">
+                            <input class="visually-hidden dop__box" type="checkbox" name="wi-fi" />
+                            <span class="dop__mark"></span>
+                            <span class="dop__label">Витамины</span>
+                        </label>
+                    </div>
+                </fieldset>
+            </form>
             <button class="dop__button-apply" type="submit">Отправить заявку</button>
             <p class="dop__text">*-Обязательные поля</p>
         </section>
         <section class="page-map">
             <h3 class="page-map__title">Приглашаем к сотрудничеству диллеров!</h3>
             <p class="page-map__address">ул. Большая Конюшенная, д. 19/8 Санкт-Петербург</p>
-            <img class="page-map__image" src="../source/img/Rectangle.jpg " width="320" height="362" alt="Карта">
+            <img class="page-map__image" src="../source/img/rectangle.jpg " width="320" height="362" alt="Карта">
         </section>
     </main>
 
