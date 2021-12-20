@@ -2,7 +2,6 @@
     display: flex;
     justify-content: center;
     flex-wrap: wrap;
-    background-color: #F2F2F2;
 }
 .meal-plan__item {
     display: flex;
@@ -11,15 +10,33 @@
     flex-wrap: wrap;
     margin-bottom: 10px;
 }
-meal-plan__title {
-    padding: 20px;
+.meal-plan__image {
 }
-meal-plan__desk {
+.meal-plan__title {
+    padding-left: 10px;
+    padding-top: 20px;
+}
+.meal-plan__desc {
     max-width: 227px;
     min-height: 103px;
+    padding-left: 10px;
+    padding-bottom: 20px;
+    border-bottom: 1px solid lightgrey;
 }
 .meal-plan__link {
-    border-top: 1px solid lightgrey;
-    padding-top: 15px;
     text-decoration: none;
+    align-self: flex-start;
+}
+div:nth-child(1){
+    background-color: #F2F2F2;
+    padding-bottom: 15px;
+    margin-top: 15px;
+    background-image: url("../img/cat-slim.svg");
+    background-repeat: no-repeat;
+}
+div:nth-child(2) {
+    background-repeat: no-repeat;
+    background-image: url("../img/cat-pro.svg");
+    background-color: #F2F2F2;
+    padding-bottom: 20px;
 }

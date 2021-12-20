@@ -11,28 +11,30 @@
 }
 .program-info__item {
     background-color: #ffffff;
-    text-indent: 5.4em;
+    font-family: "Arial", sans-serif;
+    display: flex;
+    margin-bottom: 20px;
 }
-.program-info--leaf::before {
-    content: url("../img/icon_leaf.svg");
+
+.program-info__item::before{
+    content:"";
+    display: inline-block;
+    min-width: 60px;
+    height: 60px;
     background-color: @green;
-    float: left;
-}
-.program-info--tub::before {
-    background-color: @green;
-    float: left;
     background-repeat: no-repeat;
-    content: url("../img/icon_tub.svg");
+    background-position: 50% 50%;
+    align-self: center;
 }
-.program-info--eat::before {
-    background-color: @green;
-    float: left;
-    background-repeat: no-repeat;
-    content: url("../img/icon_eat.svg");
+&--leaf::before {
+    background-image: url("../img/icon_leaf.svg");
 }
-.program-info--alarm::before {
-    background-color: @green;
-    float: left;
-    background-repeat: no-repeat;
-    content: url("../img/icon_alarm.svg");
+&--tub::before {
+    background-image: url("../img/icon_tub.svg");
+}
+&--eat::before {
+    background-image: url("../img/icon_eat.svg");
+}
+&--alarm::before {
+    background-image: url("../img/icon_alarm.svg");
 }
