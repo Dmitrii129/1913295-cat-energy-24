@@ -1,0 +1,68 @@
+@font-face {
+  font-family: "osward";
+  font-style: normal;
+  font-weight: normal;
+  src: url("../fonts/oswaldmedium.woff") format("woff");
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Osward";
+  font-style: normal;
+  font-weight: normal;
+  src: url("../fonts/oswaldmedium.woff2") format("woff2");
+  font-display: swap;
+}
+
+html {
+  height: 100%;
+}
+body {
+  font-family: Oswald;
+  font-style: normal;
+  font-weight: normal;
+  text-align: center;
+}
+.page-header {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+}
+.main-nav {
+  display: none;
+}
+.banner {
+  background-color: rgba(104, 183, 56, 0.85);
+  min-width: 320px;
+  min-height: 300px;
+  color: #ffffff;
+}
+.banner__title {
+  padding-top: 30px;
+  min-width: 250px;
+  min-height: 72px;
+}
+.banner__link {
+  background-color: rgba(104, 183, 56, 0.85);
+  text-decoration: none;
+  color: #ffffff;
+  min-width: 280px;
+  min-height: 40px;
+}
+.meal-plan {
+  display: flex;
+  flex-direction: column;
+  min-width: 280px;
+  min-height: 266px;
+  text-decoration: none;
+}
+.meal-plan__image {
+  background-color: rgba(104, 183, 56, 0.85);
+  border-radius: 60%;
+  position: absolute;
+  display: flex;
+  justify-content: flex-start;
+  min-height: 50px;
+  min-width: 50px;
+  margin-left: 52px;
+}
