@@ -8,6 +8,7 @@
 }
 .program-info__list {
     list-style-type: none;
+    padding: 0;
 }
 .program-info__item {
     background-color: #ffffff;
@@ -21,20 +22,19 @@
     display: inline-block;
     min-width: 60px;
     height: 60px;
-    background-color: @green;
     background-repeat: no-repeat;
     background-position: 50% 50%;
     align-self: center;
 }
-&--leaf::before {
+.program-info--leaf::before {
     background-image: url("../img/icon_leaf.svg");
 }
-&--tub::before {
+.program-info--tub::before {
     background-image: url("../img/icon_tub.svg");
 }
-&--eat::before {
+.program-info--eat::before {
     background-image: url("../img/icon_eat.svg");
 }
-&--alarm::before {
+.program-info--alarm::before {
     background-image: url("../img/icon_alarm.svg");
 }
