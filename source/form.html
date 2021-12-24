@@ -4,7 +4,7 @@
 <head>
     <meta charset="utf-8">
     <title>HTML Academy: Кэт энерджи</title>
-    <link rel="icon" sizes="32x32" href="./img/cat-logo.svg" type="image/svg" />
+    <link rel="icon" sizes="32x32" href="../img/cat-logo.svg" type="image/svg" />
     <link rel="stylesheet" href="./css/style.css" />
 </head>
 
@@ -22,7 +22,7 @@
                     <li class="navigation-list__item"><a href="catalog.html">Каталог продукции</a></li>
                     <li class="navigation-list__item"><a href="form.html">Подбор программы</a></li>
                 </ul>
-                <img class="main-nav__image" src="./img/index-cup-mobile.jpg" width="280" height="270"
+                <img class="main-nav__image" src="./img/index-cup.png" width="280" height="270"
                     alt="Питание для кота">
             </div>
         </nav>
@@ -34,7 +34,7 @@
             </p>
             <form class="program-otions__sorting" action="https://echo.htmlacademy.ru/" method="get">
                 <fieldset class="program-options__info">
-                    <legend class="program-options visually-hidden">информация</legend>
+                    <legend class="program-options visually-hidden" hidden>информация</legend>
                     <div class="program-options__block">
                         <label class="program-options__name">
                             <span class="program-options__label">имя:*</span>
@@ -44,17 +44,17 @@
                             <span class="program-options__label">вес(кг):*</span>
                             <input class="program-options__field" type="text" value="7" name="weight" required />
                         </label>
-                        <label class="program-options">
+                        <label class="program-options" for="age">
                             <span class="program-options__label">возраст(лет):</span>
                             <input class="program-options__field" type="text" name="age" value="7" />
                         </label>
                     </div>
                 </fieldset>
                 <fieldset class="kit">
-                    <legend class="visually-hidden" hidden>выбор программы</legend>
+                    <legend class="kit__option visually-hidden" hidden>выбор программы</legend>
                     <ul class="kit__list">
                         <li class="kit__label">
-                            <input type="radio" class="programm__field" name="weight-loss" checked />
+                            <input type="radio" class="kit__field" name="weight-loss" checked />
                             <span class="kit__box">Похудение</span>
                         </li>
                         <li class="kit__label">
@@ -121,10 +121,10 @@
     <footer class="footer">
         <img class="footer__image" src="./img/footer-logo.svg" width="128" height="24" alt="Энергия кота">
         <ul class="footer__socials">
-            <li class="footer__item"><img class="footer__social-vk" src="./img/icon_vkontakte.svg"
-                    alt="вконтакте" width="23" height="16"></li>
-            <li class="footer__item"><img class="footer__social-inst" src="./img/icon_instagram.svg"
-                    alt="инстаграмм" width="16" height="16"></li>
+            <li class="footer__item"><img class="footer__social-vk" src="./img/icon_vkontakte.svg" alt="вконтакте"
+                    width="23" height="16"></li>
+            <li class="footer__item"><img class="footer__social-inst" src="./img/icon_instagram.svg" alt="инстаграмм"
+                    width="16" height="16"></li>
             <li class="footer__item"><img class="footer__social-fb" src="./img/icon_facebook.svg" alt="фейсбук"
                     width="22" height="22"></li>
         </ul>
