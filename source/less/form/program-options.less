@@ -5,11 +5,13 @@
     display: flex;
     flex-direction: column;
     flex-wrap: wrap;
+    max-width: 320px;
 }
 .program-options__title {
     background-color: #ffffff;
-    font-size: 36px;
+    font-size: 33px;
     line-height: 36px;
+    max-width: 300px;
 }
 .program-options__subtitle {
     font-size: 14px;
@@ -22,21 +24,23 @@
     padding: 0;
 }
 .program-options__block {
-    display: flex;
-    flex-direction: column;
-    max-width: 320px;
+    display: grid;
+    grid-template-rows: 45px 45px 45px;
+    grid-template-columns: auto;
+    margin-bottom: 20px;
 }
 .program-options__label {
     text-transform: uppercase;
     font-size: 16px;
     line-height: 18px;
+    max-width: 120px;
 }
 .program-options__field {
     padding: 10px;
-    margin-left: 10px;
-    max-width: 229px;
-    padding-left: 0;
-    margin: 0;
+    border: 1px solid lightgrey;
+}
+.program-options__age {
+    margin-botom: 10px;
 }
 .program-options:nth-child(3) {
     display: flex;
