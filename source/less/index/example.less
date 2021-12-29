@@ -2,26 +2,35 @@
     background: #eaeaea;
 }
 .example__title {
-    font-style: normal;
-    font-weight: normal;
-    font-size: 36px;
+    padding-left: 20px;
     padding-top: 20px;
-    line-height: 40px;
-    text-align: center;
-    color: #000000;
+    text-align: start;
+    color: @black;
 }
 .example__desc {
-    font-family: Arial;
-    font-style: normal;
-    font-weight: normal;
-    font-size: 14px;
     padding-left: 15px;
-    line-height: 18px;
     max-width: 280px;
     min-height: 108px;
 }
+.range {
+    border: 1px solid;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+} 
+.example__range {
+    width: 85px;
+    border: 1px solid #cdcdcd;
+    border-radius: 6px;
+    margin: 0 16px;
+    background-color: @white;
+    height: 14px;
+    position: relative;
+
+}
 .example__list {
     display: flex;
+    padding-left: 20px;
     flex-direction: row;
     padding-left: 30px;
 }
@@ -43,7 +52,7 @@
 }
 .example__text {
     font-size: 12px;
-    padding-top: 10px;
+    margin-top: 10px;
     line-height: 12px;
     background: #c4c4c4;
     max-width: 87px;

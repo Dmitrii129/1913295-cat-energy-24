@@ -1,9 +1,9 @@
+.program-info {
+    padding: 0 20px;
+}
 .program-info__title {
-    font-style: normal;
-    font-weight: normal;
-    font-size: 36px;
-    line-height: 40px;
-    text-align: center;
+    text-align: left;
+    font-size: 35px;
     color: rgb(32, 22, 22);
 }
 .program-info__list {
@@ -11,6 +11,8 @@
     padding: 0;
 }
 .program-info__item {
+    position: relative;
+    padding-left: 80px;
     background-color: #ffffff;
     font-family: "Arial", sans-serif;
     display: flex;
@@ -19,7 +21,8 @@
 
 .program-info__item::before{
     content:"";
-    display: inline-block;
+    position: absolute;
+    left: 0;
     min-width: 60px;
     height: 60px;
     background-repeat: no-repeat;

@@ -6,6 +6,7 @@
     <title>HTML Academy: Кэт энерджи</title>
     <link rel="icon" sizes="32x32" href="../img/cat-logo.svg" type="image/svg" />
     <link rel="stylesheet" href="./css/style.css" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
 </head>
 
 <body class="page__body">
@@ -49,20 +50,20 @@
                         </label>
                     </div>
                 </fieldset>
-                <fieldset class="kit">
-                    <legend class="kit__option visually-hidden" hidden>выбор программы</legend>
-                    <ul class="kit__list">
-                        <li class="kit__label">
-                            <input type="radio" class="kit__field" name="weight-loss" checked />
-                            <span class="kit__box">Похудение</span>
+                <fieldset class="effect">
+                    <legend class="effect__option visually-hidden" hidden>выбор программы</legend>
+                    <ul class="effect__list">
+                        <li class="effect__label">
+                            <input type="radio" class="effect__field" name="weight-loss" checked />
+                            <label class="effect__box">Похудение</label>
                         </li>
-                        <li class="kit__label">
-                            <input type="radio" class="kit__field" name="weight-gain" />
-                            <span class="kit__box">Набор массы</span>
+                        <li class="effect__label">
+                            <input type="radio" class="effect__field" name="weight-gain" />
+                            <label class="effect__box">Набор массы</label>
                         </li>
-                        <li class="kit__label">
-                            <input type="radio" class="kit__field" name="advice" />
-                            <span class="kit__box">Не знаю(нужен ваш совет)</span>
+                        <li class="effect__label">
+                            <input type="radio" class="effect__field" name="advice" />
+                            <label class="effect__box">Не знаю(нужен ваш совет)</label>
                         </li>
                     </ul>
                 </fieldset>
@@ -82,29 +83,29 @@
                     <textarea class="commit__text" placeholder="расскажите обо всех повадках вашего кота"></textarea>
                 </fieldset>
                 <h2 class="visually-hidden" hidden>добавки</h2>
-                <fieldset class="dop">
-                    <legend class="dop__title">Дополнительно</legend>
-                    <ul class="dop__list">
-                        <li class="dop__control">
-                            <input class="visually-hidden dop__box" type="checkbox" name="sugar" checked />
-                            <span class="dop__label">Сахарозаменитель</span>
+                <fieldset class="form-">
+                    <legend class="supplement__title">Дополнительно</legend>
+                    <ul class="supplement__list">
+                        <li class="supplement__control">
+                            <input class="visually-hidden supplement__box" type="checkbox" name="sugar" checked />
+                            <span class="supplement__label">Сахарозаменитель</span>
                         </li>
-                        <li class="dop__control">
-                            <input class="visually-hidden dop__box" type="checkbox" name="water" />
-                            <span class="dop__label">Питьевая вода</span>
+                        <li class="supplement__control">
+                            <input class="visually-hidden supplement__box" type="checkbox" name="water" />
+                            <span class="supplement__label">Питьевая вода</span>
                         </li>
-                        <li class="dop__control">
-                            <input class="visually-hidden dop__box" type="checkbox" name="milk" />
-                            <span class="dop__label">Молоко</span>
+                        <li class="supplement__control">
+                            <input class="visually-hidden supplement__box" type="checkbox" name="milk" />
+                            <span class="supplement__label">Молоко</span>
                         </li>
-                        <li class="dop__control">
-                            <input class="visually-hidden dop__box" type="checkbox" name="vitamins" />
-                            <span class="dop__label">Витамины</span>
+                        <li class="supplement__control">
+                            <input class="visually-hidden supplement__box" type="checkbox" name="vitamins" />
+                            <span class="supplement__label">Витамины</span>
                         </li>
                     </ul>
-                    <button class="dop__button-apply" type="submit">Отправить заявку</button>
+                    <button class="supplement__button-apply" type="submit">Отправить заявку</button>
                 </fieldset>
-                <p class="dop__text">*-Обязательные поля</p>
+                <p class="supplement__text">*-Обязательные поля</p>
             </form>
         </section>
         <section class="page-map">
