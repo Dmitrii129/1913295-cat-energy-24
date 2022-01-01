@@ -1,19 +1,33 @@
 .contact {
-    font-family: 'Oswald';
-    font-weight: normal;
-    font-style: normal;
     border: none;
     padding: 0;
-    margin: 20px 0;
+    max-width: 320px;
+    margin-left: 20px;
 }
 .contact__title {
-    font-size: 24px;
-    line-height: 26px;
-}
-.contact__box {
+    padding: 10px 0;
     text-transform: uppercase;
 }
-.contact__label { 
+.contact__box {
+    padding: 0;
+}
+.contact__label {
+    text-transform: uppercase;
+    padding-right: 18px;
+}
+.contact__item {
+    display: flex;
+    align-items: center;
+    margin-bottom: 14px;
+}
+.contact__field {
     padding: 10px;
-    margin-bottom: 10px;
+    width: 100%;
+    border: 1px solid lightgrey;
+}
+/*.contact__field:first-child {
+    width: 180px;
+}
+.contact__field:last-child {
+    width: 165px;
 }

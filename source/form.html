@@ -36,15 +36,15 @@
                 <fieldset class="program-options__info">
                     <legend class="visually-hidden" hidden>информация</legend>
                     <div class="program-options__block">
-                        <label class="program-options__name">
+                        <label class="program-options__item" for="name">
                             <span class="program-options__label">имя:*</span>
                             <input class="program-options__field" type="text" value="барсик" name="name" required />
                         </label>
-                        <label class="program-options__weight">
+                        <label class="program-options__item" for="weight">
                             <span class="program-options__label">вес(кг):*</span>
                             <input class="program-options__field" type="text" value="7" name="weight" required />
                         </label>
-                        <label class="program-options__age" for="age">
+                        <label class="program-options__item" for="age">
                             <span class="program-options__label">возраст(лет):</span>
                             <input class="program-options__field" type="text" name="age" value="7" />
                         </label>
@@ -54,64 +54,68 @@
                     <legend class="effect__option visually-hidden" hidden>выбор программы</legend>
                     <ul class="effect__list">
                         <li class="effect__label">
-                            <input type="radio" class="effect__field" name="weight-loss" checked />
-                            <label class="effect__box">Похудение</label>
+                            <input id="weight-loss" type="radio" class="effect__field" name="program" checked />
+                            <label for="weight-loss" class="effect__box">Похудение</label>
                         </li>
                         <li class="effect__label">
-                            <input type="radio" class="effect__field" name="weight-gain" />
-                            <label class="effect__box">Набор массы</label>
+                            <input id="weight-gain" type="radio" class="effect__field" name="program" />
+                            <label for="weight-gain" class="effect__box">Набор массы</label>
                         </li>
                         <li class="effect__label">
-                            <input type="radio" class="effect__field" name="advice" />
-                            <label class="effect__box">Не знаю(нужен ваш совет)</label>
+                            <input id="advice" type="radio" class="effect__field" name="program" />
+                            <label for="advice" class="effect__box">Не знаю(нужен ваш совет)</label>
                         </li>
                     </ul>
                 </fieldset>
                 <fieldset class="contact">
                     <legend class="contact__title">Контактные данные (владельца кота)</legend>
-                    <label class="contact__box">
-                        <span class="contact__mail">E-mail:*</span>
-                        <input class="contact__label" name="mail" type="text" value="kuklachev@gmail.com" required />
-                    </label>
-                    <label class="contact__box">
-                        <span class="contact__tel">Телефон:*</span>
-                        <input class="contact__label" type="text" name="tel" value="8(960)900-60-90" required />
-                    </label>
+                    <div class="contact__box">
+                        <label class="contact__item" for="mail">
+                            <span class="contact__label">E-mail:*</span>
+                            <input class="contact__field" id="mail" type="text" value="kuklachev@gmail.com"
+                                required />
+                        </label>
+                        <label class="contact__item" for="telephone">
+                            <span class="contact__label">Телефон:*</span>
+                            <input class="contact__field" type="text" id="telephone" value="8(960)900-60-90"
+                                required />
+                        </label>
+                    </div>
                 </fieldset>
                 <fieldset class="commit">
                     <legend class="commit__title">Комментарий</legend>
                     <textarea class="commit__text" placeholder="расскажите обо всех повадках вашего кота"></textarea>
                 </fieldset>
                 <h2 class="visually-hidden" hidden>добавки</h2>
-                <fieldset class="form-">
+                <fieldset class="supplement">
                     <legend class="supplement__title">Дополнительно</legend>
                     <ul class="supplement__list">
                         <li class="supplement__control">
-                            <input class="visually-hidden supplement__box" type="checkbox" name="sugar" checked />
-                            <span class="supplement__label">Сахарозаменитель</span>
+                            <input id="sugar" class="visually-hidden supplement__box" type="checkbox" name="food" checked />
+                            <label for="sugar" class="supplement__label">Сахарозаменитель</label>
                         </li>
                         <li class="supplement__control">
-                            <input class="visually-hidden supplement__box" type="checkbox" name="water" />
-                            <span class="supplement__label">Питьевая вода</span>
+                            <input id="water" class="visually-hidden supplement__box" type="checkbox" name="food" />
+                            <label for="water" class="supplement__label">Питьевая вода</label>
                         </li>
                         <li class="supplement__control">
-                            <input class="visually-hidden supplement__box" type="checkbox" name="milk" />
-                            <span class="supplement__label">Молоко</span>
+                            <input id="milk" class="visually-hidden supplement__box" type="checkbox" name="food" />
+                            <label for="milk" class="supplement__label">Молоко</label>
                         </li>
                         <li class="supplement__control">
-                            <input class="visually-hidden supplement__box" type="checkbox" name="vitamins" />
-                            <span class="supplement__label">Витамины</span>
+                            <input id="vitamins" class="visually-hidden supplement__box" type="checkbox" name="food" />
+                            <label for="vitamins" class="supplement__label">Витамины</label>
                         </li>
                     </ul>
-                    <button class="supplement__button-apply" type="submit">Отправить заявку</button>
+                    <a class="supplement__link" href="#">Отправить заявку</a>
+                    <p class="supplement__text">*-Обязательные поля</p>
                 </fieldset>
-                <p class="supplement__text">*-Обязательные поля</p>
             </form>
         </section>
         <section class="page-map">
             <h3 class="page-map__title">Приглашаем к сотрудничеству диллеров!</h3>
             <p class="page-map__address">ул. Большая Конюшенная, д. 19/8 Санкт-Петербург</p>
-            <img class="page-map__image" src="./img/rectangle.jpg " width="280" height="362" alt="Карта">
+            <img class="page-map__image" src="./img/rectangle.jpg " alt="Карта">
         </section>
     </main>
 
