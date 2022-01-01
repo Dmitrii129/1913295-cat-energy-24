@@ -1,0 +1,51 @@
+.product {
+    display: grid;
+    grid-template-columns: 320px;
+    gap: 11px;
+    padding: 0;
+    margin-top: 25px;
+    position: relative;
+}
+.product__price {
+    display: grid;
+    text-decoration: none;
+    margin-top: 11px;
+    border-top: 2px solid lightgrey;
+    grid-template-columns: 70px 76px 37px 37px 66px;
+    grid-template-areas:
+      " product__link product__name product__name . ."
+      " product__link . . . ."
+      " product__link product__table product__table product__table product__table"
+      " product__link . . . ."
+      " product__link . . . ."
+      " . . . . ."
+      " product__btn product__btn product__btn product__btn product__btn";
+}
+.product__table {
+    border-spacing: 5px;
+}
+.product__image {
+    margin-top: 50px;
+}
+.product__title {
+    grid-area: product__title;
+}
+.product__table {
+    grid-area: product__table;
+}
+.product__name {
+    grid-area: product__name;
+    padding-left: 10px;
+}
+.product__link {
+    grid-area: product__link;
+}
+.product__btn {
+    width: 320px;
+    color: #ffff;
+    line-height: 20px;
+    font-size: 16px;
+    background-color: @green;
+    padding: 10px 10px;
+    grid-area: product__btn;
+}

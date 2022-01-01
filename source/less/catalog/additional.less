@@ -1,0 +1,70 @@
+.additional {}
+.additional__item {
+    display: grid;
+    grid-template-columns: 130px 110px 40px;
+    grid-template-areas: 
+    "additional__title additional__title ."
+    "additional__type . additional__price"
+    "additional__btn additional__btn additional__btn";
+    border-top: 2px solid lightgrey;
+    margin-bottom: 10px;
+    width: 300px;
+}
+.additional__item:last-child {
+    border-bottom: 2px solid lightgrey;
+    padding-bottom: 10px;
+}
+.additional__list {
+    padding: 0;
+}
+.additional__title {
+    grid-area: additional__title;
+}
+.additional__type {
+    grid-area: additional__type;
+}
+.additional__price {
+    grid-area: additional__price;
+}
+.additional__btn {
+    grid-area: additional__btn;
+    background-color: @green;
+    text-decoration: none;
+    text-align: center;
+    padding: 10px 10px;
+}
+.additional__box {
+    background-image: url("../../img/catalog/cat-box.jpg");
+    position: relative;
+    z-index: -1;
+    background-repeat: no-repeat;
+    color: #FFFFFF;
+    align-items: center;
+    padding: 0;
+    min-height: 300px;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+
+
+&::before {
+        content: "";
+        position: absolute;
+        height: 302px;
+        background-color: @green;
+        z-index: -1;
+        width: 100%;
+        padding: 0;
+    }
+}
+.additional__text {
+    display: flex;
+    justify-content: flex-end;
+    text-align: center;
+    font-family: Arial;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 16px;
+    line-height: 20px;
+    max-width: 161px;
+}
