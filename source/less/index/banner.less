@@ -1,0 +1,115 @@
+.banner__title {
+    font-size: 36px;
+    padding-top: 20px;
+    margin: 0;
+    line-height: 36px;
+    text-align: center;
+}
+.banner__subtitle {
+    line-height: 14px;
+    margin: 0;
+    padding-top: 25px;
+    padding-bottom: 29px;
+    text-transform: uppercase;
+    text-align: center;
+}
+.banner__link {
+    display: block;
+    text-align: center;
+    background-color: @green;
+    text-decoration: none;
+    padding: 10px;
+    margin: 0 20px;
+    text-transform: uppercase;
+    font-family: "Oswald", sans-serif;
+}
+.banner {
+    background-image: url("../img/index-background.png");
+    position: relative;
+    z-index: 1;
+    background-repeat: no-repeat;
+    color: #FFFFFF;
+    align-self: stretch;
+    padding: 0;
+
+&::before {
+        content: "";
+        position: absolute;
+        height: 302px;
+        background-color: @green;
+        z-index: -1;
+        width: 100%;
+        padding: 0;
+    }
+}
+@media (min-width: @tablet-width) and (max-width: 1199px) {
+    .banner__image {
+        width: 100%;
+        height: auto;
+    }
+    .banner {
+        color: @black;
+        margin: 0 60px;
+        &::before {
+            background-color: @white;
+        }
+    }
+    .banner__title {
+        font-size: 36px;
+        padding-top: 20px;
+        margin: 0;
+        line-height: 36px;
+        text-align: start;
+    }
+    .banner__subtitle {
+        line-height: 14px;
+        margin: 0;
+        padding-top: 25px;
+        padding-bottom: 29px;
+        text-transform: uppercase;
+        text-align: start;
+    }
+    .banner__link {
+        position: absolute;
+        top: 140px;
+        left: -20px;
+        color: @white;
+    }
+}
+@media (min-width: @desktop-width) {
+    .banner {
+        display: flex;
+        flex-direction: column;
+        background-image: url("../img/index-background.png");
+        position: relative;
+        z-index: 1;
+        background-repeat: no-repeat;
+        color: @white;
+        background-position: right;
+        padding: 0;
+    &::after {
+            content: "";
+            position: absolute;
+            background-color: @white;
+            background-position: right;
+            z-index: -1;
+            padding: 0;
+        }
+    }
+        .banner__image {
+            position: relative;
+            align-self: center;
+        }
+    .banner__title, .banner__subtitle {
+        background-position: left;
+        backgroun-color: @white;
+        z-index: 2;
+        display: flex;
+        margin-left: 64px;
+    }
+    .banner__link {
+        width: 250px;
+        position: relative;
+        bottom: 280px;
+    }
+}
