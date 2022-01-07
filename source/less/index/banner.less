@@ -16,10 +16,12 @@
 .banner__link {
     display: block;
     text-align: center;
+    justify-self: center;
+    margin: 0 auto;
     background-color: @green;
     text-decoration: none;
+    width: 80%;
     padding: 10px;
-    margin: 0 20px;
     text-transform: uppercase;
     font-family: "Oswald", sans-serif;
 }
@@ -31,6 +33,7 @@
     color: #FFFFFF;
     align-self: stretch;
     padding: 0;
+    margin-bottom: 20px;
 
 &::before {
         content: "";
@@ -42,6 +45,7 @@
         padding: 0;
     }
 }
+
 @media (min-width: @tablet-width) and (max-width: 1199px) {
     .banner__image {
         width: 100%;
@@ -72,28 +76,25 @@
     .banner__link {
         position: absolute;
         top: 140px;
-        left: -20px;
-        color: @white;
+        left: 0;
+        color: white;
+        width: 280px;
     }
 }
 @media (min-width: @desktop-width) {
     .banner {
         display: flex;
         flex-direction: column;
-        background-image: url("/img/cat-right.png");
         position: relative;
-        background-size: cover;
-        z-index: 1;
-        background-repeat: no-repeat;
         color: @white;
         background-position: right;
         padding: 0;
-    &::after {
+        &::after {
             content: "";
-            position: absolute;
-            background-color: @white;
-            background-position: right;
-            z-index: -1;
+            background-image: url("/img/cat-right.png") no-repeat;
+            position: relative;
+            background-size: contain;
+            align-self: flex-end;
             padding: 0;
         }
         &::before {
@@ -102,8 +103,8 @@
             height: 100%;
             background-color: @green;
             z-index: -1;
-            width: 50%;
             align-self: flex-end;
+            width: 50%;
             padding: 0;
         }
     }
@@ -124,5 +125,7 @@
         width: 250px;
         position: relative;
         bottom: 280px;
+        margin-left: 60px;
+        color: @white;
     }
 }

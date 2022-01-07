@@ -42,10 +42,18 @@
     background-image: url("../img/icon_alarm.svg");
 }
 @media (min-width: @tablet-width) {
+    .program-info {
+        margin-left: 35px;
+    }
     .program-info__list {
         display: grid;
         grid-template-columns: 50% 50%;
         gap: 40px;
+    }
+    .program-info__item {
+        width: 60%;
+        height: auto;
+        margin: 0;
     }
 }
 @media (min-width: @desktop-width) {
