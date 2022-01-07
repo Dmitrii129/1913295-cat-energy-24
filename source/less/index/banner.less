@@ -80,7 +80,7 @@
     .banner {
         display: flex;
         flex-direction: column;
-        background-image: url("../img/index-background.png");
+        background-image: url("/img/cat-right.png");
         position: relative;
         z-index: 1;
         background-repeat: no-repeat;
@@ -95,15 +95,27 @@
             z-index: -1;
             padding: 0;
         }
+        &::before {
+            content: "";
+            position: absolute;
+            height: 100%;
+            background-color: @green;
+            z-index: -1;
+            width: 50%;
+            align-self: flex-end;
+            padding: 0;
+        }
     }
         .banner__image {
             position: relative;
             align-self: center;
-        }
+    }
     .banner__title, .banner__subtitle {
         background-position: left;
-        backgroun-color: @white;
-        z-index: 2;
+        background-color: @white;
+        z-index: 0;
+        color: @black;
+        width: 541px;
         display: flex;
         margin-left: 64px;
     }
