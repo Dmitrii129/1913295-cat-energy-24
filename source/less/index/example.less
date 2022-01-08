@@ -1,12 +1,16 @@
 .example {
     background: #eaeaea;
 }
+
 .example__title {
     padding-left: 20px;
     padding-top: 20px;
     text-align: start;
     color: @black;
     margin: 20px 0;
+}
+.example__slider {
+    margin-left: 20px;
 }
 .example__desc {
     padding-left: 15px;
@@ -15,12 +19,18 @@
 }
 .example__list {
     display: flex;
-    padding: 10px 50px;
+    padding: 10px;
+    justify-content: center;
     flex-direction: row;
 }
 .example__cost {
     text-align: center;
     padding-top: 20px;
+    font-family: "Oswald";
+    font-style: normal;
+    font-weight: normal;
+    font-size: 14px;
+    line-height: 20px;
 }
 .example__item {
     display: flex;
@@ -44,10 +54,11 @@
     max-width: 87px;
     text-align: center;
     position: relative;
+    background-color: #eaeaea;
     top: 20px;
 }
 .example__item:nth-child(1) {
-    max-width: 127px;
+    width: 100px;
     padding: 10px;
 }
 .example__item:nth-child(2) {
