@@ -156,24 +156,25 @@
         margin: 0 auto;
         max-width: 1440px;
         display: grid;
-        grid-template-columns: 50% 50%;
-    }
-    .example__white {
-        display: flex;
-        flex-direction: column;
+        grid-template-columns: 55% 50%;
     }
     .example__title {
         background-color: @white;
+        width: 100%;
+        grid-area: title;
     }
-    .example__text {
-        background-color: @white;
+    .example__white {
+        background-color: @grey;
+    }
+    .example__grey {
+        display: grid;
+        grid-template-columns: 90% 90%;
     }
     .example__span {
         display: none;
     }
     .range {
         display: flex;
-        justify-content: flex-end;
         align-items: center;
     } 
     .example__range {
@@ -187,7 +188,7 @@
     }
     .example__cost {
         align-self: center;
-        font-family: Oswald;
+        font-family: "Oswald";
         font-style: normal;
         margin-right: auto;
         width: 286px;
