@@ -22,18 +22,12 @@
         margin-bottom: 20px;
       }
     }
-  }
-    .meal-plan__plus {
-      display: none;
-    }
-  
-    
     @media (min-width: 768px) and (max-width: 1023px) {
       padding: 77px 52px 52px;
       .meal-plan__image {
         display: none;
-      }
     }
+  }
     
     @media (min-width: 1024px) {
       width: 50%;
@@ -69,7 +63,6 @@
       top: 50px;
     }
     
-    
     &:before {
       content: '';
       position: absolute; 
@@ -92,7 +85,7 @@
 }
   
 .meal-plan__title {
-    font-family: Oswald, sans-serif;
+    font-family: "Oswald", sans-serif;
     font-size: 24px;
     line-height: 37px;
     text-transform: uppercase;
@@ -131,13 +124,13 @@
   
 .meal-plan__link {
     position: relative;
-    font-family: Oswald, sans-serif;
+    font-family: "Oswald", sans-serif;
     text-transform: uppercase;
     font-size: 16px;
     text-decoration: none;
     color: @black;
     padding-right: 60px;
-    
+
     @media (min-width: 768px) {
       font-size: 20px;
     }
@@ -149,6 +142,9 @@
       height: 10px;
       right: 0;
       transform: translateY(25%);
-      background: url(https://raw.githubusercontent.com/Dmitrii129/1913295-cat-energy-24/29d0c9ac51bb10ae5e36726bd75c618aa8f315b2/source/img/icon_arrow.svg) 0 0 no-repeat;
     }
+}
+.meal-plan__arrow {
+  align-self: center;
+  margin-left: 20px;
 }

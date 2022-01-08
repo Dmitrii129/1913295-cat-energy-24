@@ -1,8 +1,6 @@
-
-.product { margin: 0 20px;}
-@media (min-width: @mobile-width-only){
 .product {
     display: grid;
+    margin-left: 20px;
     grid-template-columns: 320px;
     gap: 11px;
     padding: 0;
@@ -48,7 +46,8 @@
     grid-area: product__link;
 }
 .product__btn {
-    width: 320px;
+    width: 90%;
+    justify-self: center;
     color: @white;
     line-height: 20px;
     font-size: 16px;
@@ -56,7 +55,7 @@
     padding: 10px 10px;
     grid-area: product__btn;
 }
-}
+
 @media (min-width: @tablet-width) {
     .catalog {
         width: 800px;

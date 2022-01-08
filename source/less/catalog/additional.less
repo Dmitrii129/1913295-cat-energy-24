@@ -2,7 +2,6 @@
     width: 100vw;
     margin-left: 20px;
 }
-@media (min-width: @mobile-width-only) {
 .additional__item {
     display: grid;
     grid-template-columns: 40% 40% 20%;
@@ -20,6 +19,7 @@
 }
 .additional__list {
     padding: 0;
+    margin: 0;
 }
 .additional__title {
     grid-area: additional__title;
@@ -36,6 +36,7 @@
     text-decoration: none;
     text-align: center;
     padding: 10px 10px;
+    width: 90%;
 }
 .additional__box {
     background-image: url("../../img/catalog/cat-box.jpg");
@@ -43,6 +44,7 @@
     z-index: -1;
     background-repeat: no-repeat;
     color: @white;
+    margin-right: 20px;
     align-items: center;
     padding: 0;
     min-height: 300px;
@@ -72,7 +74,7 @@
     line-height: 20px;
     max-width: 161px;
 }
-}
+
 @media (min-width: @tablet-width) {
     .additional__price {
         width: 640px;
