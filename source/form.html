@@ -69,11 +69,12 @@
                     </ul>
                 </fieldset>
                 <fieldset class="contact">
-                    <legend class="contact__title">контактные данные (владельца кота)</legend>
-                    <label class="contact__mail" <span class="contact__label">E-mail:*</span>
-                        <input class="contact__email" name="mail" type="text" value="kuklachev@gmail.com" required />
-                    </label>
-                    <label class="contact tel">
+                    <legend class="contact__text">Контактные данные (владельца кота)</legend>
+                    <label for="email" class="contact__block">
+                        <span class="contact__label">E-MAIL:*</span>
+                        <input id="email" class="contact__field" name="mail" type="text" value="kuklachev@gmail.com"
+                            required />
+                    <label for="number" class="contact__block">
                         <span class="contact__label">Телефон:*</span>
                         <input id="number" class="contact__field" type="text" name="telephone" value="8(960)900-60-90"
                             required />
