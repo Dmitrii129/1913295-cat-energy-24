@@ -29,3 +29,27 @@
     font-size: 14px;
     line-height: 16px;
 }
+@media (min-width: @tablet-width) {
+    .supplement {
+        margin: 0 20px;
+    .supplement__list {
+        display: grid;
+        grid-template-columns: 50% 50%;
+        gap: 10px 0;
+    &__control {
+        min-width: 222px;
+    }
+}
+    .supplement__box {
+        display: grid;
+        grid-template-columns: 40% 60%;
+        color: inherit;
+    a {
+        color: @white;
+    }
+    &__text {
+        color: @black;
+    }
+    }
+}
+}

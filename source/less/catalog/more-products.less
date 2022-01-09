@@ -8,6 +8,11 @@
 }
 .more-products__title {
     text-transform: uppercase;
+    font-family: Oswald;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 16px;
+    line-height: 20px;
 }
 .more-products__subtitle {
     font-family: Arial;
@@ -20,8 +25,14 @@
     background-color: #F2F2F2;
     padding: 10px 10px;
     font-weight: bold;
-    width: 320px;
+    width: 90%;
     font-size: 16px;
     line-height: 20px;
     text-transform: uppercase;
+}
+
+@media (min-width: @tablet-width) {
+    .more-products {
+        display: none;
+    }
 }

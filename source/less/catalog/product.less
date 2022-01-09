@@ -1,10 +1,14 @@
 .product {
     display: grid;
+    margin-left: 20px;
     grid-template-columns: 320px;
     gap: 11px;
     padding: 0;
     margin-top: 25px;
     position: relative;
+    &__plus {
+        display: none;
+    }
 }
 .product__price {
     display: grid;
@@ -36,16 +40,80 @@
 .product__name {
     grid-area: product__name;
     padding-left: 10px;
+    text-decoration: none;
 }
 .product__link {
     grid-area: product__link;
 }
 .product__btn {
-    width: 320px;
-    color: #ffff;
+    width: 90%;
+    justify-self: center;
+    color: @white;
     line-height: 20px;
     font-size: 16px;
     background-color: @green;
     padding: 10px 10px;
     grid-area: product__btn;
+}
+
+@media (min-width: @tablet-width) {
+    .catalog {
+        width: 800px;
+    }
+    .product {
+            display: grid;
+            grid-template-columns: 360px 360px;
+        &__plus {
+            display: flex;
+            flex-direction: column;
+            text-align: center;
+        }
+        &__link {
+            display: flex;
+            justify-content: center;
+        }
+        &__toggle {
+            display: flex;
+            background-color: lightgray;
+            width: 100%;
+            color: @white;
+            line-height: 20px;
+            font-size: 16px;
+            padding: 10px 10px;
+            margin-top: auto;
+            justify-content: center;
+        }
+        &__box { 
+            width: 324px;
+            display: flex;
+            padding: 0 20px;
+            flex-direction: column;
+            background-color: lightgray;
+        }
+        &__btn {
+            width: 100%;
+        }
+    }
+}
+@media (min-width:@desktop-width) {
+    .catalog {
+        width: 1200px;
+    }
+    .product {
+        display: grid;
+        grid-template-columns: 245px 245px 245px 245px;
+        gap: 10px;
+        &__box { 
+            width: 245px;
+            display: flex;
+            padding: 0 20px;
+            flex-direction: column;
+            background-color: lightgray;
+        }
+    }
+    .product__price {
+        display: flex;
+        flex-direction: column;
+        padding: 10px 0;
+    }
 }
