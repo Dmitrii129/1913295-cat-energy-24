@@ -1,10 +1,10 @@
 .contact {
     border: none;
     padding: 0;
-    max-width: 320px;
+    width: 100%;
     margin-left: 20px;
 }
-.contact__title {
+.contact__block {
     padding: 10px 0;
     text-transform: uppercase;
 }
@@ -20,14 +20,23 @@
     align-items: center;
     margin-bottom: 14px;
 }
-.contact__field {
+.contact__text {
+    font-size: 24px;
+    line-height: 26px;
+    padding-bottom: 20px;
+}
+.contact__block {
     padding: 10px;
-    width: 100%;
-    border: 1px solid lightgrey;
+    border: none;
 }
-/*.contact__field:first-child {
-    width: 180px;
+.contact__field {
+    width: 80%;
+    padding: 5px;
 }
-.contact__field:last-child {
-    width: 165px;
+@media (min-width: @tablet-width) {
+    .contact {
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+    }
 }
