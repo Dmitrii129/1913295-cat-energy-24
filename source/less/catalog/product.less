@@ -10,14 +10,16 @@
         display: none;
     }
 }
+.product__conteiner {
+    border-top: 2px solid lightgrey;
+}
 .product__price {
     display: grid;
     text-decoration: none;
     margin-top: 11px;
-    border-top: 2px solid lightgrey;
-    grid-template-columns: 70px 76px 37px 37px 66px;
+    grid-template-columns: 80px 76px 37px 66px 50px;
     grid-template-areas:
-      " product__link product__name product__name . ."
+      " product__link product__name product__name product__name product__name"
       " product__link . . . ."
       " product__link product__table product__table product__table product__table"
       " product__link . . . ."
@@ -27,19 +29,22 @@
 }
 .product__table {
     border-spacing: 5px;
+    margin-top: 10px;
+    margin-bottom: 10px;
 }
 .product__image {
     margin-top: 50px;
 }
 .product__title {
     grid-area: product__title;
+    width: 160px;
+    margin: 0;
 }
 .product__table {
     grid-area: product__table;
 }
 .product__name {
     grid-area: product__name;
-    padding-left: 10px;
     text-decoration: none;
 }
 .product__link {
@@ -47,7 +52,6 @@
 }
 .product__btn {
     width: 90%;
-    justify-self: center;
     color: @white;
     line-height: 20px;
     font-size: 16px;
@@ -72,6 +76,15 @@
             display: flex;
             justify-content: center;
         }
+        &__text {
+            text-align: center;
+            margin: 10px auto;
+        }
+        &__subtitle {
+            width: 167px;
+            margin: 10px auto;
+            text-align: center;
+        }
         &__toggle {
             display: flex;
             background-color: lightgray;
@@ -81,17 +94,23 @@
             font-size: 16px;
             padding: 10px 10px;
             margin-top: auto;
+            text-transform: uppercase;
             justify-content: center;
         }
         &__box { 
+            box-sizing: border-box;
             width: 324px;
             display: flex;
             padding: 0 20px;
             flex-direction: column;
             background-color: lightgray;
+            &__price {
+
+            }
         }
         &__btn {
-            width: 100%;
+            width: 90%;
+            margin-bottom: 10px;
         }
     }
 }
