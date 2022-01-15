@@ -10,6 +10,7 @@
 .supplement__list {
     list-style-type: none;
     padding: 0;
+    margin-top: 20px;
     display: flex;
     flex-direction: column;
 }
@@ -31,20 +32,18 @@
     padding-left: 1.3em;
     padding-bottom: 10px;
 }
-.check:first-child {
-    padding-top: 20px;
+.supplement__box {
+    appearance: none;
+    -webkit-appearance: none;
 }
 .supplement__box {
     position: absolute;
-    -webkit-appearance: none;
-    appearance: none;
-}
-.check__box {
-    position: absolute;
-    margin-left: 1.6em;
+    margin-left: -1.6em;
+    margin-top: 0.2em;
     width: 1em;
     height: 1em;
-    background-color: lightgray;
+    background-color: @white;
+    border: 2px solid red;
     background-image: url("/img/plus/checkbox.svg");
 }
 .supplement__text {
@@ -60,16 +59,30 @@
     .supplement {
         margin: 0 20px;
     .supplement__list {
-        display: grid;
-        grid-template-columns: 50% 50%;
-        gap: 10px 0;
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        margin: 20px;
     &__control {
         min-width: 222px;
     }
+    .supplement__label {
+        width: 300px;
+        height: 40px;
+    }
+}
+}
+.supplement__container {
+    margin-right: 60px;
+    margin-bottom: 0;
+}
+.supplement__text {
+    margin-top: 10px;
+}
+.supplement__link {
+    margin: 0;
 }
     .supplement__box {
-        display: grid;
-        grid-template-columns: 40% 60%;
         color: inherit;
     a {
         color: @white;
@@ -78,5 +91,4 @@
         color: @black;
     }
     }
-}
 }

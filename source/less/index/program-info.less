@@ -4,6 +4,7 @@
 .program-info__title {
     text-align: left;
     font-size: 35px;
+    margin: 20px auto;
     color: rgb(32, 22, 22);
 }
 .program-info__list {
@@ -13,7 +14,7 @@
 .program-info__item {
     position: relative;
     padding-left: 80px;
-    background-color: #ffffff;
+    background-color: @white;
     font-family: "Arial", sans-serif;
     display: flex;
     margin-bottom: 20px;
@@ -46,23 +47,93 @@
         margin-left: 35px;
     }
     .program-info__list {
-        display: grid;
-        grid-template-columns: 50% 50%;
-        gap: 40px;
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
     }
     .program-info__item {
-        width: 60%;
-        height: auto;
+        display: flex;
+        flex-direction: column;
+        flex-wrap: wrap;
+        align-self: center;
+        width: 250px;
+        height: 280px;
+        padding-top: 130px;
+        padding-left: 10px;
+        padding-right: 30px;
+        margin: 20px;
+    }
+    .program-info--leaf::before {
+        background-image: url("../img/icon_leaf.svg");
+        padding: 0;
         margin: 0;
+        position: absolute;
+        top: 30px;
+        left: 30px;
+    }
+    .program-info__item:first-child{
+        background-image: url("/img/plus/number1.svg");
+        background-color: @white;
+        background-repeat: no-repeat;
+        background-position-x: 150px;
+        background-position-y: 30px;
+    }
+    .program-info--tub::before {
+        background-image: url("../img/icon_tub.svg");
+        padding: 0;
+        margin: 0;
+        position: absolute;
+        top: 30px;
+        left: 30px;
+    }
+    .program-info__item:nth-child(2){
+        background-image: url("/img/plus/number2.svg");
+        background-color: @white;
+        background-repeat: no-repeat;
+        background-position-x: 120px;
+        background-position-y: 30px;
+    }
+    .program-info--eat::before {
+        background-image: url("../img/icon_eat.svg");
+        padding: 0;
+        margin: 0;
+        position: absolute;
+        top: 30px;
+        left: 30px;
+    }
+    .program-info__item:nth-child(3){
+        background-image: url("/img/plus/number3.svg");
+        background-color: @white;
+        background-repeat: no-repeat;
+        background-position-x: 120px;
+        background-position-y: 30px;
+    }
+    .program-info--alarm::before {
+        background-image: url("../img/icon_alarm.svg");
+        padding: 0;
+        margin: 0;
+        position: absolute;
+        top: 30px;
+        left: 30px;
+    }
+    .program-info__item:nth-child(4){
+        background-image: url("/img/plus/number4.svg");
+        background-color: @white;
+        background-repeat: no-repeat;
+        background-position-x: 120px;
+        background-position-y: 30px;
     }
 }
 @media (min-width: @desktop-width) {
-    .program-info__list {
-        display: grid;
-        grid-template-columns: 25% 25% 25% 25%;
-    }
     .program-info {
-        width: 960px;
-        margin: 0 40px;
+        width: 1200px;
+    }
+    .program-info__list {
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+    }
+    .program-info__item {
+        margin: 0;
     }
 }

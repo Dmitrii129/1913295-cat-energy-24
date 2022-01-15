@@ -28,16 +28,43 @@
 .contact__block {
     padding: 10px;
     border: none;
+    width: 100%;
 }
-.contact__field {
+.contact__mail {
     width: 1fr;
-    padding: 10px 0;
+    padding: 10px 10px;
     margin-bottom: 10px;
+    background-image: url("/img/plus/mail.png");
+    background-repeat: no-repeat;
+    background-position-x: right;
+    background-position-y: center;
 }
+.contact__telephone {
+    padding: 10px 10px;
+    width: 1fr;
+    background-image: url("/img/plus/telephone.png");
+    background-repeat: no-repeat;
+    background-position-y: center;
+    background-position-x: right;
+}
+
 @media (min-width: @tablet-width) {
     .contact {
         display: flex;
         flex-direction: column;
         width: 100%;
+        margin-right: 20px;
+    }
+    .contact__block {
+        width: 750px;
+        margin-right: 20px;
+    }
+    .contact__mail {
+        width: 100%;
+        max-width: 600px;
+    }
+    .contact__telephone {
+        width: 100%;
+        max-width: 585px;
     }
 }

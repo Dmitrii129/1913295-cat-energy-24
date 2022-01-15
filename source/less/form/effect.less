@@ -15,6 +15,14 @@
 .effect__label {
     padding: 10px;
 }
+.effect__field {
+    display: none;
+}
+.effect__box { 
+    font-size: 16px;
+    line-height: 18px;
+    max-width: 230px;
+}
 .effect__label input:checked + label::after {
     content: "";
     position: absolute;
@@ -30,14 +38,6 @@
     position: relative;
     cursor: pointer;
 }
-.effect__field {
-    display: none;
-}
-.effect__box { 
-    font-size: 16px;
-    line-height: 18px;
-    max-width: 230px;
-}
 .effect__label label::before {
     content: "";
     position: absolute;
@@ -52,5 +52,7 @@
     .effect {
     border: 2px solid lightgray;
     margin: 10px 20px;
+    width: 100%;
+    max-width: 710px;
     }
 }

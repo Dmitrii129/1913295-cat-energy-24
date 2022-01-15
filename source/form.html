@@ -74,40 +74,37 @@
                 </fieldset>
                 <fieldset class="contact">
                     <legend class="contact__text">Контактные данные (владельца кота)</legend>
-                    <label for="email" class="contact__block">
+                    <label class="contact__block">
                         <span class="contact__label">E-MAIL:*</span>
-                        <input id="email" class="contact__field" name="mail" type="text" value="kuklachev@gmail.com"
+                        <input class="contact__mail" name="mail" type="text" placeholder="kuklachev@gmail.com"
                             required />
-                        <label for="number" class="contact__block">
+                            </label>
+                        <label " class="contact__block">
                             <span class="contact__label">Телефон:*</span>
-                            <input id="number" class="contact__field" type="text" name="telephone"
+                            <input class="contact__telephone" type="text" name="telephone"
                                 value="8(960)900-60-90" required />
                         </label>
                 </fieldset>
                 <fieldset class="commit">
                     <legend class="commit__title">Комментарий</legend>
-                    <textarea class="commit__text" placeholder="расскажите обо всех повадках вашего кота"></textarea>
+                    <textarea class="commit__text" placeholder="расскажите обо всех повадках кота"></textarea>
                 </fieldset>
                 <h2 class="visually-hidden" hidden>добавки</h2>
                 <fieldset class="supplement">
                     <legend class="supplement__title">Дополнительно</legend>
                     <div class="supplement__list">
-                            <label class="supplement__label check">
+                            <label class="supplement__label">
                                 <input class="supplement__box" type="checkbox" name="food"
                                     checked>Сахарозаменитель
-                                <span class="check__box"></span>
                             </label>
-                            <label class="supplement__label check">
+                            <label class="supplement__label">
                                 <input class="supplement__box" type="checkbox" name="food">Питьевая вода
-                                <span class="check__box"></span>
                             </label>
-                            <label class="supplement__label check">
+                            <label class="supplement__label">
                                 <input class="supplement__box" type="checkbox" name="food">Молоко
-                                <span class="check__box"></span>
                             </label>
-                            <label class="supplement__label check">
+                            <label class="supplement__label">
                                 <input class="supplement__box" type="checkbox" name="food">Витамины
-                                <span class="check__box"></span>
                             </label>
                             </div>
                     <div class="supplement__container"> <a class="supplement__link" href="#">Отправить заявку</a>
