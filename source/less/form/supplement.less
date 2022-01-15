@@ -10,6 +10,8 @@
 .supplement__list {
     list-style-type: none;
     padding: 0;
+    display: flex;
+    flex-direction: column;
 }
 .supplement__control {
     padding-bottom: 10px;
@@ -19,15 +21,40 @@
     text-align: center;
     background-color: @green;
     text-decoration: none;
+    color: @white;
     padding: 10px;
     margin: 0 20px;
     text-transform: uppercase;
     font-family: "Oswald", sans-serif;
 }
+.supplement__label {
+    padding-left: 1.3em;
+    padding-bottom: 10px;
+}
+.check:first-child {
+    padding-top: 20px;
+}
+.supplement__box {
+    position: absolute;
+    -webkit-appearance: none;
+    appearance: none;
+}
+.check__box {
+    position: absolute;
+    margin-left: 1.6em;
+    width: 1em;
+    height: 1em;
+    background-color: lightgray;
+    background-image: url("/img/plus/checkbox.svg");
+}
 .supplement__text {
     text-align: center;
     font-size: 14px;
     line-height: 16px;
+}
+.supplement__container {
+    margin-bottom: 20px;
+    margin-top: 10px;
 }
 @media (min-width: @tablet-width) {
     .supplement {

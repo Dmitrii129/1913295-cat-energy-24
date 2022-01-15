@@ -1,14 +1,14 @@
 .additional {
     width: 100vw;
-    margin-left: 20px;
+    margin: 0 20px;
 }
 .additional__item {
     display: grid;
-    grid-template-columns: 40% 40% 20%;
+    grid-template-columns: 40% 35% 20%;
     grid-template-areas: 
-    "additional__title additional__title ."
-    "additional__type . additional__price"
-    "additional__btn additional__btn additional__btn";
+    "subtitle subtitle subtitle"
+    "type . price"
+    "btn btn btn";
     border-top: 2px solid lightgrey;
     margin-bottom: 10px;
     width: 320px;
@@ -22,29 +22,45 @@
     margin: 0;
 }
 .additional__title {
-    grid-area: additional__title;
+    font-family: Oswald;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 24px;
+    line-height: 24px;
+    margin: 30px 0;
+}
+.additional__subtitle {
+    grid-area: subtitle;
+    margin: 20px 0;
+    font-family: Oswald;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 16px;
+    line-height: 16px;
 }
 .additional__type {
-    grid-area: additional__type;
+    grid-area: type;
 }
 .additional__price {
-    grid-area: additional__price;
+    grid-area: price;
 }
 .additional__btn {
-    grid-area: additional__btn;
+    grid-area: btn;
     background-color: @green;
     text-decoration: none;
     text-align: center;
     padding: 10px 10px;
+    margin-top: 10px;
+    color: @white;
     width: 90%;
 }
 .additional__box {
-    background-image: url("../../img/catalog/cat-box.jpg");
+    background-image: url("/img/catalog/cat-box.jpg");
     position: relative;
     z-index: -1;
     background-repeat: no-repeat;
     color: @white;
-    margin-right: 20px;
+    margin-right: 38px;
     align-items: center;
     padding: 0;
     min-height: 300px;
@@ -59,8 +75,7 @@
         height: 302px;
         background-color: @green;
         z-index: -1;
-        width: 100%;
-        padding: 0;
+        width: 282px;
     }
 }
 .additional__text {
@@ -77,25 +92,32 @@
 
 @media (min-width: @tablet-width) {
     .additional__price {
-        width: 640px;
+        width: 100%;
+        margin: 0;
+        height: auto;
+        &__btn {
+            width: 85%;
+        }
     }
     .additional__item {
         display: grid;
+        width: 100%;
+        margin: 10px auto;
         grid-template-columns: 40% 40% 20%;
         grid-template-areas: 
-        "additional__title additional__title ."
-        "additional__type . additional__price"
-        "additional__btn additional__btn additional__btn";
-        border-top: 2px solid lightgrey;
-        margin-bottom: 10px;
+        "subtitle subtitle subtitle"
+        "type . price"
+        "btn btn btn";
     }
     .additional__box {
         background-image: url("/img/cat-box2.jpg");
         position: relative;
         z-index: -1;
         background-repeat: no-repeat;
+        padding-bottom: 70px;
         color: @white;
-        padding: 0;
+        top: 20px;
+        margin-top: 10px;
         max-height: 200px;
         align-self: center;
         display: flex;
@@ -110,6 +132,7 @@
             z-index: -1;
             width: 100%;
             padding: 0;
+            top: 0;
         }
     
     }
@@ -117,9 +140,6 @@
         display: flex;
         justify-content: flex-end;
         text-align: center;
-        font-family: Arial;
-        font-style: normal;
-        font-weight: normal;
         font-size: 16px;
         line-height: 20px;
         max-width: 161px;

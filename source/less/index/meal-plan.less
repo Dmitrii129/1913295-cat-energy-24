@@ -2,14 +2,19 @@
     display: flex;
     flex-flow: column;
     flex-wrap: wrap;
-    @media (min-width: 768px) and (max-width: 1023px) {
+    @media (min-width: @tablet-width) and (max-width: 1023px) {
         padding: 0 30px;
     }
-    @media (min-width: 1024px) {
+    @media (min-width: @desktop-width) {
         flex-flow: row;
         justify-content: space-between;
     }
 }
+.meal-plan__plus{
+  visibility: hidden;
+  display: none;
+}
+
 .meal-plan__item {
     background-color: #F2F2F2;
     padding: 20px;
@@ -22,24 +27,24 @@
         margin-bottom: 20px;
       }
     }
-    @media (min-width: 768px) and (max-width: 1023px) {
+    @media (min-width: @tablet-width) and (max-width: 1023px) {
       padding: 77px 52px 52px;
-      .meal-plan__image {
-        display: none;
-    }
   }
-    
-    @media (min-width: 1024px) {
-      width: 50%;
-      margin: 0 40px;
-      box-sizing: border-box;
-      padding: 77px 52px 55px 52px;
-      .meal-plan__plus {
-        display: none;
-      }
-    }
 }
-  
+
+//   @media (min-width: @desctop-width) {
+//     .meal-plan__item {
+//       width: 50%;
+//       margin: 0 40px;
+//       box-sizing: border-box;
+//       padding: 77px 52px 55px 52px;
+// }
+//     .meal-plan__image {
+//       position: absolute;
+//       top: 10px;
+//     }
+// }
+
 .meal-plan__icon {
     position: absolute;
     display: inline-flex;
@@ -49,20 +54,21 @@
     width: 70px;
     height: 60px;
     
-    @media (min-width: 768px) and (max-width: 1023px) {
+    @media (min-width: @tablet-width) and (max-width: 1023px) {
       width: 268px;
       height: 200px;
       right: 0;
       top: 50px;
     }
+  }
     
-    @media (min-width: 1024px) {
+    @media (min-width: @desktop-width) {
+    .meal-plan__icon {
       width: 134px;
       height: 100px;
       left: 30px;
       top: 50px;
-    }
-    &:before {
+    &::before {
       content: '';
       position: absolute; 
       z-index: -1;
@@ -70,18 +76,26 @@
       height: 50px;
       border-radius: 50%;
       background-color: #68B738;
+    }
+  }
+}
       
-      @media (min-width: 768px) and (max-width: 1023px) {
+      @media (min-width: @tablet-width) and (max-width: 1023px) {
+      .meal-plan__icon {
         width: 200px;
         height: 200px;
       }
+    }
       
-      @media (min-width: 1024px) {
+      @media (min-width: @desktop-width) {
+        .meal-plan__icon {
         width: 100px;
         height: 100px;
       }
     }
-}
+
+
+    
   
 .meal-plan__title {
     font-family: "Oswald", sans-serif;
@@ -91,15 +105,15 @@
     margin: 10px 0 0 90px;
     font-weight: normal;
     
-    @media (min-width: 768px) and (max-width: 1023px) {
+    @media (min-width: @tablet-width) and (max-width: 1023px) {
       margin: 0;
     }
     
-    @media (min-width: 768px) {
+    @media (min-width: @tablet-width) {
       font-size: 36px;
     }
     
-    @media (min-width: 1024px) {
+    @media (min-width: @desktop-width) {
       margin: 10px 0 0 130px;
     }
 }
@@ -112,15 +126,20 @@
       border-bottom: 1px solid #D9D9D9;
     }
     
-    @media (min-width: 768px) and (max-width: 1023px) {
+    @media (min-width: @tablet-width) and (max-width: 1023px) {
       padding-right: 40%;
     }
     
-    @media (min-width: 1024px) {
+    @media (min-width: @desktop-width) {
       margin-top: 40px;
     }
 }
-  
+
+.meal-plan__arrow {
+  align-self: center;
+  margin-left: 20px; 
+}
+
 .meal-plan__link {
     position: relative;
     font-family: "Oswald", sans-serif;
@@ -129,10 +148,11 @@
     text-decoration: none;
     color: @black;
     padding-right: 60px;
+}
 
-    @media (min-width: 768px) {
+    @media (min-width: @tablet-width) {
+    .meal-plan__link {
       font-size: 20px;
-    }
     
     &:after {
       content: '';
@@ -142,8 +162,5 @@
       right: 0;
       transform: translateY(25%);
     }
-}
-.meal-plan__arrow {
-  align-self: center;
-  margin-left: 20px;
-}
+  }
+    }

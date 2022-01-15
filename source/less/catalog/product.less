@@ -10,14 +10,16 @@
         display: none;
     }
 }
+.product__conteiner {
+    border-top: 2px solid lightgrey;
+}
 .product__price {
     display: grid;
     text-decoration: none;
     margin-top: 11px;
-    border-top: 2px solid lightgrey;
-    grid-template-columns: 70px 76px 37px 37px 66px;
+    grid-template-columns: 80px 76px 37px 66px 50px;
     grid-template-areas:
-      " product__link product__name product__name . ."
+      " product__link product__name product__name product__name product__name"
       " product__link . . . ."
       " product__link product__table product__table product__table product__table"
       " product__link . . . ."
@@ -27,19 +29,22 @@
 }
 .product__table {
     border-spacing: 5px;
+    margin-top: 10px;
+    margin-bottom: 10px;
 }
 .product__image {
     margin-top: 50px;
 }
 .product__title {
     grid-area: product__title;
+    width: 160px;
+    margin: 0;
 }
 .product__table {
     grid-area: product__table;
 }
 .product__name {
     grid-area: product__name;
-    padding-left: 10px;
     text-decoration: none;
 }
 .product__link {
@@ -47,7 +52,6 @@
 }
 .product__btn {
     width: 90%;
-    justify-self: center;
     color: @white;
     line-height: 20px;
     font-size: 16px;
@@ -58,10 +62,15 @@
 
 @media (min-width: @tablet-width) {
     .catalog {
-        width: 800px;
+        max-width: 800px;
+        &__title {
+            margin: 20px;
+        }
     }
     .product {
             display: grid;
+            row-gap: 70px;
+            margin-top: 100px;
             grid-template-columns: 360px 360px;
         &__plus {
             display: flex;
@@ -72,6 +81,32 @@
             display: flex;
             justify-content: center;
         }
+        &__text {
+            text-align: center;
+            margin-top: 60px;
+            margin-left: auto;
+            margin-right: auto;
+            margin-bottom: 10px;
+            max-width: 170px;
+            font-family: "Oswald";
+            font-style: normal;
+            font-weight: normal;
+            font-size: 20px;
+            line-height: 22px;
+        }
+        &__subtitle {
+            width: 167px;
+            margin: 10px auto;
+            text-align: center;
+        }
+        &__title {
+            width: 160px;
+            margin-top: 90px;
+            margin-bottom: 50px;
+            margin-left: 10px;
+            margin-right: 10px;
+
+        }
         &__toggle {
             display: flex;
             background-color: lightgray;
@@ -79,25 +114,40 @@
             color: @white;
             line-height: 20px;
             font-size: 16px;
-            padding: 10px 10px;
+            padding: 20px;
             margin-top: auto;
+            margin-bottom: 10px;
+            text-transform: uppercase;
             justify-content: center;
         }
         &__box { 
+            box-sizing: border-box;
             width: 324px;
+            height: 511px;
             display: flex;
             padding: 0 20px;
-            flex-direction: column;
             background-color: lightgray;
         }
         &__btn {
-            width: 100%;
+            width: 90%;
+            margin-bottom: 10px;
+            padding: 10px;
         }
+        &__link {
+            margin-top: 40px;
+        }
+    }
+    .product__image {
+        position: absolute;
+        margin-top: -110px;
+        margin-left: 100px;
+        width: 20%;
+        height: auto;
     }
 }
 @media (min-width:@desktop-width) {
     .catalog {
-        width: 1200px;
+        max-width: 1200px;
     }
     .product {
         display: grid;
@@ -106,6 +156,8 @@
         &__box { 
             width: 245px;
             display: flex;
+            height: auto;
+            margin-top: 50px;
             padding: 0 20px;
             flex-direction: column;
             background-color: lightgray;
@@ -115,5 +167,12 @@
         display: flex;
         flex-direction: column;
         padding: 10px 0;
+    }
+    .product__image {
+        position: absolute;
+        margin-top: -65px;
+        margin-left: 0;
+        width: 10%;
+        height: auto;
     }
 }
