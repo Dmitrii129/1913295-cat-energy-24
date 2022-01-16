@@ -66,9 +66,9 @@
     max-width: 127px;
 }
 .example__slim {
-    overflow: hidden;
-    display: none;
-
+    @media (max-width: @mobile-width-only) {
+        display: none;
+    }
 }
     .range {
         display: flex;
@@ -94,7 +94,7 @@
     }
 @media (min-width: @tablet-width) {
     .example {
-        background: linear-gradient(to top, @grey 85%, @white 15%);
+        background: linear-gradient(to top, #EAEAEA 35%, @white 15%);
         display: flex;
         flex-direction: column;
         flex-wrap: wrap;
@@ -126,17 +126,9 @@
         margin: 0 auto;
     }
     .example__slim {
-        display: flex;
         position: absolute;
-        background:linear-gradient(to top, @grey 67%, @white 33%);
         left: 128px;
         top: 0;
-        width: 137px;
-        &__slim {
-            position: absolute;
-            background-color: @white;
-            height: 20px;
-        }
     }
     .range {
         display: flex;

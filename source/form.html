@@ -78,12 +78,12 @@
                         <span class="contact__label">E-MAIL:*</span>
                         <input class="contact__mail" name="mail" type="text" placeholder="kuklachev@gmail.com"
                             required />
-                            </label>
-                        <label " class="contact__block">
-                            <span class="contact__label">Телефон:*</span>
-                            <input class="contact__telephone" type="text" name="telephone"
-                                value="8(960)900-60-90" required />
-                        </label>
+                    </label>
+                    <label " class=" contact__block">
+                        <span class="contact__label">Телефон:*</span>
+                        <input class="contact__telephone" type="text" name="telephone" value="8(960)900-60-90"
+                            required />
+                    </label>
                 </fieldset>
                 <fieldset class="commit">
                     <legend class="commit__title">Комментарий</legend>
@@ -92,21 +92,22 @@
                 <h2 class="visually-hidden" hidden>добавки</h2>
                 <fieldset class="supplement">
                     <legend class="supplement__title">Дополнительно</legend>
-                    <div class="supplement__list">
-                            <label class="supplement__label">
-                                <input class="supplement__box" type="checkbox" name="food"
-                                    checked>Сахарозаменитель
-                            </label>
-                            <label class="supplement__label">
-                                <input class="supplement__box" type="checkbox" name="food">Питьевая вода
-                            </label>
-                            <label class="supplement__label">
-                                <input class="supplement__box" type="checkbox" name="food">Молоко
-                            </label>
-                            <label class="supplement__label">
-                                <input class="supplement__box" type="checkbox" name="food">Витамины
-                            </label>
-                            </div>
+                    <ul class="supplement__list">
+                        <li class="supplement__label">
+                            <input id="sugar" class="supplement__field" type="checkbox" name="food" checked>
+                            <label for="sugar" class="supplement__box">Сахарозаменитель</label>
+                        </li>
+                        <li class="supplement__label">
+                            <input id="water" class="supplement__field" type="checkbox" name="food">
+                            <label for="water" class="supplement__box">Питьевая вода</label>
+                        </li>
+                        <li class="supplement__label">
+                            <input id="milk" class="supplement__field" type="checkbox" name="food">
+                            <label for="milk" class="supplement__box">Молоко</label>
+                        <li class="supplement__label">
+                            <input id="vitamin" class="supplement__field" type="checkbox" name="food">
+                            <label for="vitamin" class="supplement__box">Витамины</label>
+                    </ul>
                     <div class="supplement__container"> <a class="supplement__link" href="#">Отправить заявку</a>
                         <p class="supplement__text">*-Обязательные поля</p>
                     </div>
