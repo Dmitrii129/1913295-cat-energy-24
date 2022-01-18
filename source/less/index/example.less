@@ -8,7 +8,7 @@
     color: @black;
     margin: 20px 0;
 }
-.example__slider {
+.example__image {
     margin-left: 20px;
 }
 .example__desc {
@@ -22,9 +22,10 @@
     justify-content: center;
     flex-direction: row;
 }
-.example__cost {
+.example__lot {
     text-align: center;
     padding-top: 20px;
+    margin-left: auto;
     font-family: "Oswald";
     font-style: normal;
     font-weight: normal;
@@ -65,6 +66,7 @@
     padding: 10px;
     max-width: 127px;
 }
+.example__slider,
 .example__slim {
     @media (max-width: @mobile-width-only) {
         display: none;
@@ -94,10 +96,22 @@
     }
 @media (min-width: @tablet-width) {
     .example {
-        background: linear-gradient(to top, #EAEAEA 35%, @white 15%);
+        background: linear-gradient(to top, @whitegrey 35%, @white 15%);
         display: flex;
         flex-direction: column;
         flex-wrap: wrap;
+    }
+    .example__list {
+        justify-content: left;
+    }
+    .example__cost {
+        align-self: center;
+    }
+    .example__image {
+        display: none;
+    }
+    .example__text {
+        background-color: @white;
     }
     .example__title {
         padding: 0;
@@ -130,6 +144,10 @@
         left: 128px;
         top: 0;
     }
+    .example__slider img:first-child {
+        position: relative;
+        right: 152px;
+    }
     .range {
         display: flex;
         flex-direction: row;
@@ -137,19 +155,40 @@
         justify-content: center;
         align-items: center;
         text-transform: uppercase;
+        
+    }
+    .example__tag p {
+        padding-right: 10px;
+        padding-left: 10px;
     }
     .example__range {
-        width: 426px;
-        border: 1px solid lightgray;
+        width: 20px;
+        border: 1px solid @grey;
+        height: 20px;
         margin: 0 16px;
-        border-radius: 6px;
-        height: 6px;
-        position: relative;
+        border-radius: 16px;
+        position: absolute;
+        z-index: 1;
         background-color: @white;
+        &::before {
+            content: "";
+            position: absolute;
+            z-index: 1;
+            width: 4px;
+            height: 4px;
+            left: 8px;
+            top: 7px;
+            border-radius: 2px;
+            background-color: @green;
+        }
     }
     .example__span {
-        overflow: hidden;
-        clip: rect(0 0 0 0);
+        width: 420px;
+        height: 20px;
+        border-radius: 3px;
+        background-color: lightgray;
+        height: 8px;
+        position: relative;
     }
 }
 @media (min-width: @desktop-width) {
@@ -160,22 +199,16 @@
         flex-direction: row;
         height: 600px;
         flex-wrap: wrap;
-        background: linear-gradient(to top, @grey 70%, @white 30%);
+        background: linear-gradient(to top, @greylight 70%, @white 30%);
     }
-    .example__item:nth-child(1) {
-        width: 160px;
-        padding-right: 30px;
-        padding-left: 30px;
+    .example__lot {
+        padding: 0;
     }
-    .example__item:nth-child(2) {
-        padding-right: 50px;
-        padding-left: 50px;
-        width: 160px;
-        margin-left: 30px;
-    }
-    .example__span {
-        overflow: hidden;
-        clip: rect(0 0 0 0);
+    .example__list {
+        margin-left: 40px;
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
     }
     .example__title {
         margin: 10px;
@@ -187,45 +220,25 @@
         height: 60px;
         line-height: 60px;
     }
-    .range {
-        display: flex;
-        align-self: center;
-        justify-self: flex-end;
-        height: 14px;
-        margin-bottom: 10px;
-        margin-left: auto;
-        margin-right: 30px;
-    } 
-    .example__range {
-        width: 426px;
-        border: 1px solid #cdcdcd;
-        border-radius: 6px;
-        margin: 0 16px;
-        background-color: @white;
-        height: 14px;
-        position: relative;
+    .example__text {
+        background-color: @greylight;
     }
-    .example__slim {
-        background-color: @grey;
+    .example__lot {
+        margin-left: 0;
+        margin-top: 40px;
+        margin-right: 20px;
     }
     .example__slider {
         position: relative;
-        top: 72px;
-        width: 30%;
-        left: 60px;
-        height: auto;
-    }
-    .example__slider img:first-child {
-        width: 90%;
-        height: auto;
-    }
-    .example__slim {
-        width: 45%;
-        height: auto;
-        left: 195px;
+        top: 37px;
+        width: 28%;
+        left: 0;
     }
     .example__desc {
         margin-bottom: 20px;
+        margin-top: 10px;
+        font-size: 16px;
+        line-height: 24px;
     }
     .example__box {
         display: flex;
@@ -234,21 +247,57 @@
         width: 500px;
         position: relative;
         height: 320px;
-        top: 270px;
-        right: 242px;
+        top: 211px;
+        right: 314px;
     }
     .example__cost {
         font-family: "Oswald";
         font-style: normal;
         width: 286px;
-        margin-top: 50px;
-        margin-left: 10px;
-        margin-right: 10px;
-        text-align: -webkit-right;
+        position: relative;
         padding: 0;
         font-weight: normal;
         font-size: 20px;
         line-height: 20px;
         align-items: flex-end;
     }
+    .example__span {
+        width: 440px;
+        height: 20px;
+        margin-right: auto;
+        border-radius: 3px;
+        background-color: lightgray;
+        height: 8px;
+        position: relative;
+    }
+    .range {
+    display: flex;
+    flex-direction: row;
+    font-weight: bolder;
+    justify-content: center;
+    align-items: center;
+    text-transform: uppercase;
+    margin-left: auto;
+    }
+    .example__range {
+        width: 20px;
+        border: 1px solid @grey;
+        height: 20px;
+        margin: 0 16px;
+        border-radius: 16px;
+        position: absolute;
+        z-index: 1;
+        background-color: @white;
+        &::before {
+            content: "";
+            position: absolute;
+            z-index: 1;
+            width: 4px;
+            height: 4px;
+            left: 8px;
+            top: 7px;
+            border-radius: 2px;
+            background-color: @green;
+        }
+}
 }
