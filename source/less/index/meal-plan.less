@@ -7,7 +7,9 @@
     }
     @media (min-width: @desktop-width) {
         flex-flow: row;
+        max-width: 1440px;
         justify-content: space-between;
+        margin: 0 105px 0 105px;
     }
 }
 .meal-plan__plus{
@@ -17,9 +19,7 @@
 
 .meal-plan__item {
     background-color: #F2F2F2;
-    padding: 20px;
-    margin: 145px 20px;
-    width: 90%;
+    padding: 10px;
     position: relative;
     
     &:not(:last-child) {
@@ -29,6 +29,10 @@
     }
     @media (min-width: @tablet-width) and (max-width: 1023px) {
       padding: 77px 52px 52px;
+  }
+  @media (min-width: @desktop-width) {
+    width: 570px;
+    height: 374px;
   }
 }
 
@@ -94,8 +98,10 @@
       
       @media (min-width: @desktop-width) {
         .meal-plan__icon {
-        width: 100px;
-        height: 100px;
+        top: 45px;
+        left: 51px;
+        width: 107px;
+        height: 110px;
       }
     }
 

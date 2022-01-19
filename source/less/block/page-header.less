@@ -61,8 +61,6 @@
     font-family: "Oswald";
     font-style: normal;
     font-weight: normal;
-    font-size: 20px;
-    line-height: 20px;
 }
 @media (min-width: @tablet-width) and (max-width: 1199px) {
     .page-header__image,
@@ -116,12 +114,21 @@
     .page-header__toggle {
         display: none;
     }
+    .page-header {
+        max-width: 1440px;
+    }
     .banner {
-        padding-top: 20px;
+        margin-left: 120px;
+        height: 553px;
+    }
+    .main-nav__logo {
+        margin-left: 120px;
     }
     .banner__image {
         position: relative;
-        left: 50%;
+        left: 55%;
+        width: 40%;
+        bottom: 270px;
         transform: translate(-50%, 0);
     }
     .main-nav {
@@ -146,7 +153,7 @@
         line-height: 30px;
     }
     .main-nav__logo {
-        margin: 20px 20px;
+        margin: 55px 120px;
     }
     .main-nav__list {
         display: flex;
@@ -165,6 +172,7 @@
             z-index: -1;
             top: 0;
             background-image: url("/img/plus/index-cat.png");
+            background-repeat: no-repeat;
         }
         &::after {
             width: 50%;
@@ -174,25 +182,29 @@
             right: 0;
             position: absolute;
             background-image: url("/img/plus/green.png");
+            background-repeat: no-repeat;
         }
     }
     .banner__title {
         font-size: 60px;
         line-height: 60px;
-        margin: 0 0 0 40px;
+        width: 447px;
+        margin: 60px 0 0 34px;
     }
     .banner__subtitle {
         font-size: 20px;
         line-height: 20px;
-        margin-left: 40px;
+        margin-left: 48px;
+        margin-top: 33px;
+
     }
     .banner__link {
         position: absolute;
-        top: 280px;
-        left: 40px;
+        top: 460px;
+        left: 195px;
         box-sizing: border-box;
         display: block;  
         font-size: 14px;
-        padding: 13px 44px;
+        padding: 15px 46px;
     }
 }

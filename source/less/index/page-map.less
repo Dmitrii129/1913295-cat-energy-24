@@ -25,10 +25,10 @@
     max-width: 160px;
     min-height: 60px;
     text-align: left;
+    justify-self: flex-end;
 }
-.page-map {
+.page-map__image {
     width: 100vw;
-    margin-left: 0 20px;
 }
 @media (min-width: @tablet-width) {
     .page-map__location {
@@ -36,26 +36,30 @@
         padding: 0 40px;
         grid-template-columns: 60% 40%;
         grid-template-areas: 
-        "&__title &__address";
+        "title address";
     }
+    .page-map img {
+        width: 100%; 
+        height: auto;
+        max-height: 400px;  
+        object-fit: cover; 
+        object-position: center; 
+        }
     .page-map__address {
         justify-self: flex-end;
     }
     .page-map__image {
-        width: 100%;
         height: auto;
         order: 2;
     }
 }
 @media (min-width: @desktop-width) {
-    .page-map__conteiner {
-        width: 1440px;
-        height: 400px;
-        overflow: hidden;
-        &__image {
-            margin-top: -100px;
-            margin-left: -200px;
-        }
+    .page-map img {
+    width: 100%; 
+    height: auto;
+    max-height: 400px;  
+    object-fit: cover;
+    object-position: center; 
     }
     .page-map__location {
         content: "";
