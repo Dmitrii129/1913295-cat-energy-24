@@ -3,7 +3,7 @@
     flex-direction: row;
     flex-wrap: wrap;
     justify-content: space-evenly;
-    width: 100vw;
+    width: 100%;
 }
 .page-map {
     max-width: 100%;
@@ -11,7 +11,6 @@
 }
 .page-map__title {
     margin-left: 10px;
-    grid-area: title;
     max-width: 124px;
     min-height: 60px;
     font-size: 16px;
@@ -21,22 +20,21 @@
 }
 .page-map__address {
     max-width: 100%;
-    grid-area: address;
     max-width: 160px;
     min-height: 60px;
     text-align: left;
     justify-self: flex-end;
 }
 .page-map__image {
-    width: 100vw;
+    max-width: 100%;
+
 }
 @media (min-width: @tablet-width) {
     .page-map__location {
-        display: grid;
-        padding: 0 40px;
-        grid-template-columns: 60% 40%;
-        grid-template-areas: 
-        "title address";
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: space-evenly;
     }
     .page-map img {
         width: 100%; 
