@@ -246,15 +246,13 @@ text-transform: uppercase;
 @media (min-width: @desktop-width) {
     .example {
         margin: 0 auto;
+        width: 100%;
         max-width: 1440px;
         display: flex;
         flex-direction: row;
         height: 600px;
         flex-wrap: wrap;
         background: linear-gradient(to top, @greylight 70%, @white 30%);
-    }
-    .example__lot {
-        padding: 0;
     }
     .example__list {
         margin-left: 40px;
@@ -263,12 +261,12 @@ text-transform: uppercase;
         flex-wrap: wrap;
     }
     .example__title {
-        margin: 10px;
-        width: auto;
+        margin-top: 200px;
         font-family: "Oswald";
         font-style: normal;
         font-weight: normal;
         font-size: 60px;
+        margin-left: 90px;
         height: 60px;
         line-height: 60px;
     }
@@ -276,6 +274,7 @@ text-transform: uppercase;
         background-color: @greylight;
     }
     .example__lot {
+        padding: 0;
         margin-left: 0;
         margin-top: 40px;
         margin-right: 20px;
@@ -284,6 +283,7 @@ text-transform: uppercase;
         position: relative;
         top: 37px;
         width: 28%;
+        margin: 0;
         left: 0;
     }
     .example__desc {
@@ -299,8 +299,11 @@ text-transform: uppercase;
         width: 500px;
         position: relative;
         height: 320px;
-        top: 211px;
-        right: 314px;
+        top: 411px;
+        right: 304px;
+    }
+    .example__image {
+        display: none;
     }
     .example__cost {
         font-family: "Oswald";
@@ -326,8 +329,10 @@ text-transform: uppercase;
     display: flex;
     flex-direction: row;
     font-weight: bolder;
+    width: 500px;
+    height: 15px;
     justify-content: center;
-    align-items: center;
+    align-items: flex-start;
     text-transform: uppercase;
     margin-left: auto;
     }

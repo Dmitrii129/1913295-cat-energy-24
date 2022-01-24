@@ -50,7 +50,7 @@
 .program-info--alarm::before {
     background-image: url("../img/icon_alarm.svg");
 }
-@media (min-width: @tablet-width) {
+@media (min-width: @tablet-width) and (max-width: 1199px) {
     .program-info {
         margin-left: 35px;
     }
@@ -150,14 +150,34 @@
 }
 @media (min-width: @desktop-width) {
     .program-info {
-        width: 1200px;
+        width: 1440px;
+        width: 100%;
     }
     .program-info__list {
         display: flex;
         flex-direction: row;
         flex-wrap: wrap;
+        margin-left: 50px;
+        
     }
     .program-info__item {
+        margin-top: 30px;
+        margin-bottom: 30px;
+        max-width: 250px;
+    }
+    .program-info__title {
+        font-size: 55px;
+        margin-bottom: 0;
+        margin-left: 90px;
+        margin-top: 72px;
+        line-height: 60px;
+    }
+    .program-info--alarm::before {
+        background-image: url("../img/icon_alarm.svg");
+        padding: 0;
         margin: 0;
+        position: absolute;
+        top: 30px;
+        left: 70px;
     }
 }
