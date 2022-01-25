@@ -31,7 +31,7 @@
     
     &:not(:last-child) {
       @media (max-width: 1199px) {
-        margin-bottom: 0;
+        margin-bottom: 20px;
       }
     }
     @media (min-width: @tablet-width) and (max-width: 1199px) {
@@ -57,14 +57,14 @@
     }
   }
   @media (min-width: @tablet-width) {
-  .meal-plan__image {
+ div .meal-plan__image:nth-child(1) {
     position: absolute;
     margin-top: -16px;
     margin-left: -3px;
     width: 68%;
     height: auto;
   }
-  .meal-plan__picture {
+  .meal-plan__image:last-child {
     position: absolute;
     width: 269px;
     margin-top: 10px;
@@ -153,12 +153,7 @@
 }
     @media (min-width: @tablet-width) {
     .meal-plan__link:nth-child(1) {
-      top: 51px;
-    }
-    .meal-plan__link:last-child {
-      top: 50px;
       font-size: 20px;
-      position: relative;
     }
     
     // &:after {
