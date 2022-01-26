@@ -84,14 +84,31 @@
     }
 }   
 @media (min-width: @desktop-width) {
+    .footer__image:first-child:active {
+        opacity: 0.6;
+    } 
     .footer__item {
         background-color: @greylight;
         padding: 10px 40px;
+        &:hover {
+            background-color: @green;
+        }
+        &:active {
+            background-color: @green;
+            opacity: 0.3;
+        }
     }
     .footer__item:first-child {
         padding-left: 0;
     }
     .footer__logo {
         margin: auto 40px;
+        &:hover {
+            background-color: @green;
+        }
+        &:active {
+            background-color: @green;
+            opacity: 0.3;
+        }
     }
 }

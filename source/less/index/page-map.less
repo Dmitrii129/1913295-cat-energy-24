@@ -1,3 +1,4 @@
+@media (max-width: @mobile-width-only) {
 .page-map__location {
     display: flex;
     flex-direction: row;
@@ -31,7 +32,8 @@
 }
 .page-map__image {
     max-width: 100%;
-
+    display: block;
+}
 }
 @media (min-width: @tablet-width) {
     .page-map__location {
@@ -63,21 +65,37 @@
     }
 }
 @media (min-width: @desktop-width) {
+    .page-map {
+        position: relative;
+    }
     .page-map img {
     width: 100%; 
     height: auto;
+    display: block;
     max-height: 400px;  
     object-fit: cover;
     object-position: center; 
     }
+    .page-map__title {
+        font-family: "Oswald";
+    font-style: normal;
+    font-weight: normal;
+    font-size: 20px;
+    line-height: 26px;
+    }
+    .page-map__address {
+        font-size: 16px;
+        line-height: 20px;
+    }
     .page-map__location {
         content: "";
-        position: relative;
-        width: 390px;
+        position: absolute;
+        width: 590px;
         margin: 0;
         padding: 0;
-        top: 225px;
-        left: 70px;
+        height: 150px;
+        top: 100px;
+        left: 10px;
         background-color: @white;
     }
 }

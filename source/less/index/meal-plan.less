@@ -1,32 +1,27 @@
 .meal-plan {
-    display: flex;
-    max-width: 100%;
-    flex-flow: column;
-    flex-wrap: wrap;
+  max-width: 100%;
     @media (max-width: @mobile-width-only) {
-      margin: 0 20px;
+      margin: 0 auto;
     }
     @media (min-width: @tablet-width) and (max-width: 1199px) {
-        padding: 0 30px;
+        margin: 0 auto;
         width: 100%;
     }
     @media (min-width: @desktop-width) {
-        flex-flow: row;
         max-width: 1440px;
         width: 100%;
-        justify-content: space-between;
-        margin: 0 105px 0 105px;
+        display: grid;
+        grid-template-columns: 50% 50%;
+        margin: 0 auto;
     }
-}
-.meal-plan__plus{
-  visibility: hidden;
-  display: none;
 }
 
 .meal-plan__item {
     background-color: @greylight;
     padding: 13px;
     margin-top: 0;
+    display: flex;
+    flex-flow: column;
     position: relative;
     
     &:not(:last-child) {
@@ -40,8 +35,28 @@
   @media (min-width: @desktop-width) {
     width: 570px;
     height: 374px;
+    padding: 50px;
   }
 }
+@media (max-width: @mobile-width-only) {
+.meal-plan__item {
+  margin-top: 20px;
+}
+.meal-plan__image--panter {
+  position: absolute;
+  width: 69px;
+  margin-top: 0px;
+  margin-left: 0px;
+  height: auto;
+}
+  .meal-plan__icon {
+    background-color: @green;
+    border-radius: 50%;
+    width: 50px;
+    height: 50px;
+  }
+}
+
 .meal-plan__icon {
     position: absolute;
     background-color: @green;
@@ -57,14 +72,14 @@
     }
   }
   @media (min-width: @tablet-width) {
- div .meal-plan__image:nth-child(1) {
+  .meal-plan__image {
     position: absolute;
     margin-top: -16px;
     margin-left: -3px;
     width: 68%;
     height: auto;
   }
-  .meal-plan__image:last-child {
+  .meal-plan__image--panter {
     position: absolute;
     width: 269px;
     margin-top: 10px;
@@ -76,6 +91,11 @@
     .meal-plan__icon {
       left: 20px;
       top: 3px;
+  }
+  .meal-plan__image--panter {
+    position: absolute;
+    width: 134px;
+    top: 10px;
   }
 }
       
@@ -104,6 +124,11 @@
     font-style: normal;
     text-transform: uppercase;
     font-weight: normal;
+    @media (max-width: @mobile-width-only) {
+      text-align: center;
+      font-size: 24px;
+      line-height: 37px;
+    }
     
     @media (min-width: @tablet-width) and (max-width: 1199px) {
       margin: 0;
@@ -134,6 +159,7 @@
     
     @media (min-width: @desktop-width) {
       margin-top: 40px;
+      padding-top: 40px;
     }
 }
 
@@ -149,11 +175,14 @@
     font-size: 16px;
     text-decoration: none;
     color: @black;
-    padding-right: 60px;
+    &:active {
+      opacity: 0.3;
+    }
 }
     @media (min-width: @tablet-width) {
-    .meal-plan__link:nth-child(1) {
+    .meal-plan__link {
       font-size: 20px;
+      margin-top: auto;
     }
     
     // &:after {

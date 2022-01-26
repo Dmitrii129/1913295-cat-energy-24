@@ -27,7 +27,7 @@
         </div>
         <ul class="main-nav__list" style="list-style: none;">
           <li class="main-nav__item">
-            <a href="#" style="text-decoration: none;">Главная</a>
+            <a href="index.html" style="text-decoration: none;">Главная</a>
           </li>
           <li class="main-nav__item">
             <a href="catalog.html" style="text-decoration: none;">Каталог продукции</a>
@@ -41,7 +41,11 @@
     <div class="banner">
       <h1 class="banner__title"> Функциональное питание для котов </h1>
       <p class="banner__subtitle">Занялся собой? Займись котом!</p>
+      <picture>
+        <source media="(min-width: 1200px)" srcset="/img/picture/index-can.jpg 1x, /img/picture/index-can@2x.jpg 2x" type="image/jpeg"> 
+        <source media="(min-width: 768px)" srcset="/img/picture/index-can-mobile1@2x.jpg 2x" type="image/jpeg">
       <img class="banner__image" src="/img/index-cup.png" width="280" height="270" alt="Питание для кота">
+      </picture>
       <a class="banner__link" href="form.html">Подобрать программу</a>
     </div>
   </header>
@@ -64,7 +68,7 @@
       </div>
       <div class="meal-plan__item">
         <div class="meal-plan__icon">
-          <img class="meal-plan__image" src="/img/cat-pro.svg" alt="упитанный" width="67" height="28">
+          <img class="meal-plan__image--panter" src="/img/cat-pro.svg" alt="упитанный" width="67" height="28">
         </div>
         <div class="meal-plan__text">
           <h3 class="meal-plan__title">Набор массы</h3>
@@ -97,7 +101,6 @@
 
     <section class="example">
       <h2 class="example__title"> Живой пример </h2>
-      <form class="example__box">
         <p class="example__desc">Борис сбросил 5 кг за 2 месяца, просто заменив свой обычный корм на Cat Energy
           Slim.
           Отличный результат без
@@ -113,7 +116,6 @@
             <p class="example__cost">Затраты на питание: 15 000 руб.</p>
           </div>
         </div>
-      </form>
       <div class="example__image">
         <img src="/img/big-cat.png" alt="большой кот">
       </div>

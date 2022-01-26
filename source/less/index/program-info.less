@@ -151,7 +151,8 @@
 }
 @media (min-width: @desktop-width) {
     .program-info {
-        width: 1440px;
+        max-width: 1440px;
+        margin: 0 auto;
         width: 100%;
     }
     .program-info__list {
@@ -163,8 +164,13 @@
     }
     .program-info__item {
         margin-top: 30px;
+        padding-top: 100px;
         margin-bottom: 30px;
         max-width: 250px;
+        margin-left: 20px;
+    }
+    .program-info__item:nth-child(4) {
+        margin-left: 20px;
     }
     .program-info__title {
         font-size: 55px;
@@ -175,10 +181,22 @@
     }
     .program-info--alarm::before {
         background-image: url("../img/icon_alarm.svg");
-        padding: 0;
-        margin: 0;
         position: absolute;
-        top: 30px;
-        left: 70px;
+        left: 10px;
+    }
+    .program-info--eat::before {
+        background-image: url("../img/icon_eat.svg");
+        position: absolute;
+        left: 10px;
+    }
+    .program-info--tub::before {
+        background-image: url("../img/icon_tub.svg");
+        position: absolute;
+        left: 10px;
+    }
+    .program-info--leaf::before {
+        background-image: url("../img/icon_leaf.svg");
+        position: absolute;
+        left: 10px;
     }
 }

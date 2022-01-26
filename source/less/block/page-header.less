@@ -17,13 +17,6 @@
     .banner__title {
         padding-top: 27px;
     }
-    .banner__link {
-        width: 100%;
-        box-sizing: border-box;
-        display: block;  
-        font-size: 14px;
-        padding: 13px 44px;
-        }
     
     // .banner {
     //     height: 302px;
@@ -65,12 +58,16 @@
     }
 }
 .banner__link {
+    width: 100%;
+    box-sizing: border-box;
+    display: block;  
+    font-size: 14px;
+    padding: 13px 44px;
     background-color: @green;
     text-transform: uppercase;
-    max-width: 320px;
     text-decoration: none;
     text-align: center;
-    color: #FFFFFF;
+    color: @white;
     font-family: "Oswald", sans-serif;
 }
 .banner__title {
@@ -164,6 +161,7 @@
     }
     .page-header {
         max-width: 1440px;
+        margin: 0 auto;
     }
     .banner {
         margin-left: 150px;
@@ -194,9 +192,20 @@
         font-size: 18px;
         line-height: 22px;
         z-index: 1;
+        a:hover {
+            opacity: 0.9;
+        } 
+        a:focus {
+            opacity: 0.3;
+        }
+        a:active {
+        border-bottom: 2px solid @white; 
+        padding-bottom: 10px;
+    }
+
     }   
         .main-nav__item:nth-child(1) {
-            margin-left: 90px;
+            margin-left: 120px;
         }
         .main-nav__item:nth-child(2) {
             margin-left: 0;
@@ -261,11 +270,18 @@
     .banner__link {
         position: absolute;
         top: 458px;
+        width: 300px;
         left: 195px;
         text-transform: uppercase;
         box-sizing: border-box;
         display: block;  
         font-size: 18px;
         padding: 17px 30px;
-    }
+        &:hover{
+          opacity: 0.9;
+        }   
+        &:active {
+            opacity: 0.3;
+        }
+     }
 }
