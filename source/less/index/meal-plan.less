@@ -8,7 +8,7 @@
         width: 100%;
     }
     @media (min-width: @desktop-width) {
-        max-width: 1440px;
+        max-width: 1200px;
         width: 100%;
         display: grid;
         grid-template-columns: 50% 50%;
@@ -19,9 +19,9 @@
 .meal-plan__item {
     background-color: @greylight;
     padding: 13px;
-    margin-top: 0;
-    display: flex;
-    flex-flow: column;
+    width: 100%;
+    box-sizing: border-box;
+    display: block;  
     position: relative;
     
     &:not(:last-child) {
@@ -30,10 +30,13 @@
       }
     }
     @media (min-width: @tablet-width) and (max-width: 1199px) {
-      padding: 63px 50px 144px;
+      height: 372px;
+      max-width: 100%;
+      width: 700px;
+      margin: 0 auto;
   }
   @media (min-width: @desktop-width) {
-    width: 570px;
+    max-width: 570px;
     height: 374px;
     padding: 50px;
   }
@@ -132,6 +135,9 @@
     
     @media (min-width: @tablet-width) and (max-width: 1199px) {
       margin: 0;
+      padding-top: 70px;
+      padding-bottom: 20px;
+      padding-left: 5%;
     }
     
     @media (min-width: @tablet-width) {
@@ -154,7 +160,8 @@
     }
     
     @media (min-width: @tablet-width) and (max-width: 1199px) {
-      padding-right: 40%;
+      padding-right: 45%;
+      padding-left: 5%;
     }
     
     @media (min-width: @desktop-width) {
