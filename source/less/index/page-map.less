@@ -16,52 +16,53 @@
     margin-left: 16px;
     max-width: 124px;
     min-height: 60px;
-    font-size: 18px;
-    line-height: 20px;
-    font-weight: bold;
-    text-transform: uppercase;
 }
 .page-map__address {
     max-width: 160px;
     min-height: 60px;
-    font-size: 14px;
     margin-left: 20px;
-    line-height: 20px;
     text-align: left;
     justify-self: flex-end;
 }
 .page-map__image {
     max-width: 100%;
     display: block;
+    font-size: 14px;
 }
+}
+.page-map__address {
+    line-height: 20px;
+}
+.page-map__title {
+    font-family: "Oswald";
+    font-style: normal;
+    font-size: 18px;
+    line-height: 20px;
+    font-weight: bold;
+    text-transform: uppercase;
 }
 @media (min-width: @tablet-width) {
     .page-map__location {
         display: flex;
         flex-direction: row;
         flex-wrap: wrap;
-        margin-top: 50px;
-        margin-bottom: 60px;
-        justify-content: space-between;
+        margin: 40px 50px;
     }
     .page-map__title {
-        margin-left: 60px;
+        width: 170px;
     }
     .page-map img {
         width: 100%; 
         height: auto;
         max-height: 400px;  
+        display: block;
         object-fit: cover; 
         object-position: center; 
         }
     .page-map__address {
-        justify-self: flex-end;
-        margin-right: 60px;
         text-align: right;
-    }
-    .page-map__image {
-        height: auto;
-        order: 2;
+        width: 173px;
+        margin-left: auto;
     }
 }
 @media (min-width: @desktop-width) {
@@ -77,9 +78,6 @@
     object-position: center; 
     }
     .page-map__title {
-    font-family: "Oswald";
-    font-style: normal;
-    font-weight: normal;
     margin: auto 60px;
     font-size: 20px;
     width: 160px;
@@ -99,7 +97,7 @@
         padding: 0;
         height: 200px;
         top: 100px;
-        left: 10px;
+        left: 20px;
         background-color: @white;
     }
 }
