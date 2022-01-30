@@ -1,9 +1,16 @@
 .example {
+    font-family: "Oswald";
+    font-style: normal;
+    font-weight: normal;
+    max-width: 100%;
     background-color: @whitegrey;
 }
-.example {
-    max-width: 100%;
+.example__desc {
+    font-family: "Arial";
+    font-style: normal;
+    font-weight: normal;
 }
+@media (max-width: @mobile-width-only) {
 .example__title {
     padding-left: 20px;
     padding-top: 20px;
@@ -32,11 +39,8 @@
 }
 .example__lot {
     text-align: center;
-    font-family: "Oswald";
-    font-style: normal;
-    font-weight: normal;
     font-size: 14px;
-    margin-top: 14px;
+    margin-top: 8px;
     line-height: 16px;
 }
 .example__image {
@@ -51,40 +55,41 @@
     text-align: center;
 }
 .example__subtitle {
-    font-family: "Oswald";
-    font-style: normal;
-    font-weight: normal;
     font-size: 24px;
     line-height: 24px;
 }
 .example__text {
     font-size: 12px;
     line-height: 12px;
-    max-width: 87px;
+    max-width: 50px;
+    left: 20px;
     text-align: center;
     position: relative;
-    top: 5px;
+    top: 10px;
+}
+.example__index {
+    font-size: 16px;
+    line-height: 20px;
+    text-transform: uppercase;
+}
 }
 .example__item:nth-child(1) {
     @media (max-width: @mobile-width-only) {
-    padding: 7px 19px 0px 17px;
-    width: 100px;
-    margin-right: 4px;
+    width: 125px;
+    padding-left: 15px;
+    padding-right: 15px;
+    padding-top: 15px;
+    margin-right: 20px;
 }
 }
 .example__item:nth-child(2) {
     @media (max-width: @mobile-width-only) {
-    margin-left: 20px;
-    padding: 7px 15px 0px 15px;
+        width: 125px;
+        padding: 10px;
+        padding-left: 15px;
+        padding-right: 15px;
+        padding-top: 15px;
 }
-}
-.example__index {
-font-family: "Oswald";
-font-style: normal;
-font-weight: normal;
-font-size: 16px;
-line-height: 20px;
-text-transform: uppercase;
 }
 .example__slider,
 .example__slim {
@@ -280,9 +285,6 @@ text-transform: uppercase;
         flex-wrap: wrap;
     }
     .example__title {
-        font-family: "Oswald";
-        font-style: normal;
-        font-weight: normal;
         font-size: 60px;
         margin-left: 90px;
         height: 60px;
@@ -320,9 +322,6 @@ text-transform: uppercase;
         display: none;
     }
     .example__cost {
-        font-family: "Oswald";
-        font-style: normal;
-        font-weight: normal;
         width: 286px;
         position: relative;
         font-size: 20px;

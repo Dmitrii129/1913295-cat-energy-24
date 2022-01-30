@@ -1,3 +1,4 @@
+@media (max-width: @mobile-width-only) {
 .program-info {
     margin: 0 20px;
     max-width: 100%;
@@ -5,39 +6,39 @@
 .program-info__title {
     font-size: 34px;
     line-height: 40px;
-    margin-bottom: 45px;
+    margin-bottom: 35px;
+    margin-top: 20px;
 }
 .program-info__list {
     list-style-type: none;
     padding: 0;
+    margin: 0;
 }
 .program-info__item {
     position: relative;
-    margin-left: 75px;
+    margin-left: 80px;
 }
 .program-info__item:nth-child(1) {
-    margin-bottom: 60px;
+    margin-bottom: 30px;
 }
 .program-info__item:nth-child(2) {
-    margin-bottom: 60px;
+    margin-bottom: 25px;
 }
 .program-info__item:nth-child(3) {
-    margin-bottom: 60px;
+    margin-bottom: 25px;
 }
 .program-info__item:nth-child(4) {
-    margin-bottom: 60px;
+    margin-bottom: 55px;
 }
 .program-info__item::before {
     content:"";
     position: absolute;
-    left: -75px;
-    top: 0;
+    left: -79px;
+    top: -1px;
     min-width: 60px;
     height: 60px;
     background-repeat: no-repeat;
     background-position: 50% 50%;
-    align-self: center;
-    margin-bottom: 20px;
 }
 .program-info--leaf::before {
     background-image: url("../img/icon_leaf.svg");
@@ -50,6 +51,7 @@
 }
 .program-info--alarm::before {
     background-image: url("../img/icon_alarm.svg");
+}
 }
 @media (min-width: @tablet-width) and (max-width: 1199px) {
     .program-info {
