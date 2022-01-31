@@ -1,212 +1,174 @@
 .meal-plan {
-@media (max-width: @mobile-width-only) {
-  margin: 0 20px;
-  display: flex;
-  max-width: 100%;
-  margin-top: 20px;
-  flex-flow: column;
-  flex-wrap: wrap;
-}
-@media (min-width: @tablet-width) and (max-width: 1199px) {
-  padding: 0 30px;
-  max-width: 100%;
-}
+    display: flex;
+    max-width: 100%;
+    flex-flow: column;
+    flex-wrap: wrap;
+    @media (max-width: @mobile-width-only) {
+      margin: 0 20px;
+    }
+    @media (min-width: @tablet-width) and (max-width: 1199px) {
+        padding: 0 30px;
+        width: 100%;
+    }
+    @media (min-width: @desktop-width) {
+        flex-flow: row;
+        max-width: 1440px;
+        width: 100%;
+        justify-content: space-between;
+        margin: 0 105px 0 105px;
+    }
 }
 .meal-plan__plus{
   visibility: hidden;
   display: none;
 }
-@media (max-width: @mobile-width-only){
-.meal-plan__item:last-child {
-  margin-bottom: 0;
-}
-}
-.meal-plan__item {
-@media (max-width: @mobile-width-only) {
-  background-color: @greylight;
-  position: relative;
-  height: 266px;
-  margin-bottom: 20px;
-}
-@media (min-width: @tablet-width) and (max-width: 1199px) {
-  padding-left: 50px;
-  padding-right: 50px; 
-  height: 372px;
-  padding-top: 50px;
-}
-}
-.meal-plan__icon {
-@media (max-width: @mobile-width-only) {
-  position: absolute;
-  background-color: @green;
-  border-radius: 50%;
-  display: inline-flex;
-  z-index: 1;
-  justify-content: center;
-  align-items: center;
 
-@media (min-width: @tablet-width) and (max-width: 1199px) {
-  right: 60px;
-  top: 74px;
-}
-}
-}
-@media (min-width: @tablet-width) {
-.meal-plan__image {
-  position: absolute;
-  margin-top: -16px;
-  margin-left: -3px;
-  width: 140px;
-  height: auto;
-}
-.meal-plan__image--panter {
-  position: absolute;
-  width: 269px;
-  margin-top: 10px;
-  margin-left: 0px;
-  height: auto;
-}
-}
-@media (max-width: @mobile-width-only) {
-.meal-plan__image--panter {
-  position: relative;
-  width: 70px;
-  height: 30px;
-  top: 10px;
-  left: -15px;
-}
-.meal-plan__icon--elips {
-  background-color: @green;
-  width: 50px;
-  height: 50px;
-  top: 20px;
-  left: 25px;
-  position: absolute;
-  border-radius: 50%;
-}
-.meal-plan__image {
-  position: relative;
-  top: 0px;
-  left: 0px;
-  width: 36px;
-  height: auto;
+.meal-plan__item {
+    background-color: @greylight;
+    padding: 13px;
+    margin-top: 0;
+    position: relative;
+    
+    &:not(:last-child) {
+      @media (max-width: 1199px) {
+        margin-bottom: 20px;
+      }
+    }
+    @media (min-width: @tablet-width) and (max-width: 1199px) {
+      padding: 63px 50px 144px;
+  }
+  @media (min-width: @desktop-width) {
+    width: 570px;
+    height: 374px;
+  }
 }
 .meal-plan__icon {
-  background-color: @green;
-  width: 50px;
-  height: 50px;
-  top: 15px;
-  left: 20px;
-  position: absolute;
-  border-radius: 50%;
+    position: absolute;
+    background-color: @green;
+    border-radius: 50%;
+    display: inline-flex;
+    z-index: 1;
+    justify-content: center;
+    align-items: center;
+    
+    @media (min-width: @tablet-width) and (max-width: 1199px) {
+      right: 60px;
+      top: 74px;
+    }
+  }
+  @media (min-width: @tablet-width) {
+  .meal-plan__image {
+    position: absolute;
+    margin-top: -16px;
+    margin-left: -3px;
+    width: 68%;
+    height: auto;
+  }
+  .meal-plan__image--panter {
+    position: absolute;
+    width: 269px;
+    margin-top: 10px;
+    margin-left: 0px;
+    height: auto;
+  }
+  .meal-plan__icon--elips {
+    position: absolute;
+    background-color: @green;
+    border-radius: 50%;
+    width: 200px;
+    height: 200px;
+  }
+    @media (min-width: @desktop-width) {
+    .meal-plan__icon {
+      left: 20px;
+      top: 3px;
+  }
 }
-}
-@media (min-width: @tablet-width) and (max-width: 1199px) {
-.meal-plan__icon,
-.meal-plan__icon--elips {
-  width: 200px;
-  height: 200px;
-}
-}
-.meal-plan__title {
-@media (max-width: @mobile-width-only) {
-  text-align: center;
-  font-size: 24px;
-  line-height: 37px;
-  padding-left: 35px;
-  text-transform: uppercase;
+      
+      @media (min-width: @tablet-width) and (max-width: 1199px) {
+      .meal-plan__icon {
+        width: 200px;
+        height: 200px;
+      }
+    }
+      
+      @media (min-width: @desktop-width) {
+        .meal-plan__icon {
+        top: 45px;
+        left: 51px;
+        width: 107px;
+        height: 110px;
+      }
+    }
+
+
+    
   
-}
-@media (min-width: @tablet-width) and (max-width: 1199px) {
-  margin: 0;
-  font-size: 34px;
-  padding-top: 35px;
-}
+.meal-plan__title {
+    font-family: "Oswald", sans-serif;
+    line-height: 37px;
+    font-style: normal;
+    text-transform: uppercase;
+    font-weight: normal;
+    
+    @media (min-width: @tablet-width) and (max-width: 1199px) {
+      margin: 0;
+    }
+    
+    @media (min-width: @tablet-width) {
+      font-size: 36px;
+    }
+    
+    @media (min-width: @desktop-width) {
+      margin: 10px 0 0 130px;
+    }
 }
 .meal-plan__desc {
-@media (max-width: 767px) {
-  border-bottom: 1px solid #D9D9D9;
-  font-size: 14px;
-  line-height: 18px;
-  padding-top: 10px;
-  padding-left: 20px;
-  padding-bottom: 20px;
-  padding-right: 20px;
-  margin: 0;
+  margin-top: 31px;
+  margin-right: 13px;
+  padding-bottom: 22px;
+    @media (max-width: 767px) {
+      border-bottom: 1px solid #D9D9D9;
+      font-size: 16px;
+      line-height: 26px;
+      padding: 0;
+    }
+    
+    @media (min-width: @tablet-width) and (max-width: 1199px) {
+      padding-right: 40%;
+    }
+    
+    @media (min-width: @desktop-width) {
+      margin-top: 40px;
+    }
 }
 
-@media (min-width: @tablet-width) and (max-width: 1199px) {
-  padding-right: 40%;
-}
-}
-.meal-plan__link {
-  font-family: "Oswald", sans-serif;
-  text-transform: uppercase;
-  text-decoration: none;
-}
-@media (max-width: @mobile-width-only) {
 .meal-plan__arrow {
   align-self: center;
-  margin-left: 10px; 
-}
-.meal-plan__link {
-  position: relative;
-  font-size: 16px;
-  color: @black;
-  top: 20px;
-  left: 20px;
-}
-}
-@media (min-width: @tablet-width) {
-.meal-plan__link {
-  font-size: 20px;
-  position: absolute;
-  bottom: 60px;
-}
+  margin-left: 20px; 
 }
 
-@media (min-width: @desktop-width) {
-.meal-plan {
-  flex-flow: row;
-  display: grid;
-  grid-template-columns: 50% 50%;
-  gap: 40px;
-  max-width: 1200px;
-  width: 100%;
-  justify-content: space-between;
-  margin: 0 auto;
-}
-.meal-plan__item {
-  padding: 50px;
-}
-.meal-plan__icon {
-  width: 100px;
-  height: 100px;
-  background-color: @green;
-  position: absolute;
-}
-.meal-plan__image--panter {
-  width: 135px;
-}
-.meal-plan__title {
-  font-family: "Oswald";
-  text-align: center;
-  font-style: normal;
-  font-weight: normal;
-  font-size: 36px;
-  line-height: 36px;
-}
-.meal-plan__desc {
-  font-size: 16px;
-  line-height: 24px;
-  padding-top: 50px;
-  padding-bottom: 50px;
-}
 .meal-plan__link {
-  font-family: "Oswald";
-  font-style: normal;
-  font-weight: normal;
-  font-size: 20px;
-  line-height: 30px;
+    position: relative;
+    font-family: "Oswald", sans-serif;
+    text-transform: uppercase;
+    font-size: 16px;
+    text-decoration: none;
+    color: @black;
+    padding-right: 60px;
 }
-}
+    @media (min-width: @tablet-width) {
+    .meal-plan__link:nth-child(1) {
+      font-size: 20px;
+    }
+    
+    // &:after {
+    //   content: '';
+    //   position: absolute;
+    //   width: 30px;
+    //   top: 20px;
+    //   height: 10px;
+    //   right: 0;
+    //   transform: translateY(25%);
+    // }
+  }
