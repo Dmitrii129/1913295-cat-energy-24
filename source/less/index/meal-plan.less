@@ -64,6 +64,7 @@
     width: 68%;
     height: auto;
   }
+}
   .meal-plan__image--panter {
     position: absolute;
     width: 269px;
@@ -78,62 +79,62 @@
   }
 }
       
-      @media (min-width: @tablet-width) and (max-width: 1199px) {
-      .meal-plan__icon {
-        width: 200px;
-        height: 200px;
-      }
-    }
-      
-      @media (min-width: @desktop-width) {
-        .meal-plan__icon {
-        top: 45px;
-        left: 51px;
-        width: 107px;
-        height: 110px;
-      }
-    }
+  @media (min-width: @tablet-width) and (max-width: 1199px) {
+  .meal-plan__icon {
+    width: 200px;
+    height: 200px;
+  }
+}
+  
+  @media (min-width: @desktop-width) {
+    .meal-plan__icon {
+    top: 45px;
+    left: 51px;
+    width: 107px;
+    height: 110px;
+  }
+}
 
 
     
   
 .meal-plan__title {
-    font-family: "Oswald", sans-serif;
-    line-height: 37px;
-    font-style: normal;
-    text-transform: uppercase;
-    font-weight: normal;
-    
-    @media (min-width: @tablet-width) and (max-width: 1199px) {
-      margin: 0;
-    }
-    
-    @media (min-width: @tablet-width) {
-      font-size: 36px;
-    }
-    
-    @media (min-width: @desktop-width) {
-      margin: 10px 0 0 130px;
-    }
+  font-family: "Oswald", sans-serif;
+  line-height: 37px;
+  font-style: normal;
+  text-transform: uppercase;
+  font-weight: normal;
+  
+  @media (min-width: @tablet-width) and (max-width: 1199px) {
+    margin: 0;
+  }
+  
+  @media (min-width: @tablet-width) {
+    font-size: 36px;
+  }
+  
+  @media (min-width: @desktop-width) {
+    margin: 10px 0 0 130px;
+  }
 }
 .meal-plan__desc {
   margin-top: 31px;
   margin-right: 13px;
   padding-bottom: 22px;
-    @media (max-width: 767px) {
-      border-bottom: 1px solid #D9D9D9;
-      font-size: 16px;
-      line-height: 26px;
-      padding: 0;
-    }
-    
-    @media (min-width: @tablet-width) and (max-width: 1199px) {
-      padding-right: 40%;
-    }
-    
-    @media (min-width: @desktop-width) {
-      margin-top: 40px;
-    }
+  @media (max-width: 767px) {
+    border-bottom: 1px solid #D9D9D9;
+    font-size: 16px;
+    line-height: 26px;
+    padding: 0;
+  }
+  
+  @media (min-width: @tablet-width) and (max-width: 1199px) {
+    padding-right: 40%;
+  }
+  
+  @media (min-width: @desktop-width) {
+    margin-top: 40px;
+  }
 }
 
 .meal-plan__arrow {
@@ -154,14 +155,4 @@
     .meal-plan__link:nth-child(1) {
       font-size: 20px;
     }
-    
-    // &:after {
-    //   content: '';
-    //   position: absolute;
-    //   width: 30px;
-    //   top: 20px;
-    //   height: 10px;
-    //   right: 0;
-    //   transform: translateY(25%);
-    // }
   }
