@@ -1,3 +1,35 @@
+.program-info__item--leaf span {
+    content: "";
+    position: absolute;
+    background-image: url("/img/picture/icon_leaf.svg");
+    background-color: @green;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+.program-info__item--tub span {
+    content: "";
+    position: absolute;
+    background-image: url("/img/picture/icon_tub.svg");
+    background-color: @green;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+.program-info__item--eat span {
+    content: "";
+    position: absolute;
+    background-image: url("/img/picture/icon_eat.svg");
+    background-color: @green;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+.program-info__item--alarm span {
+    content: "";
+    position: absolute;
+    background-image: url("/img/picture/icon_alarm.svg");
+    background-color: @green;
+    background-repeat: no-repeat;
+    background-position: center;
+}
 @media (max-width: @mobile-width-only) {
 .program-info {
     margin: 0 20px;
@@ -17,43 +49,33 @@
 .program-info__item {
     position: relative;
     margin-left: 80px;
+    margin-bottom: 40px;
 }
-.program-info__item:nth-child(1) {
-    margin-bottom: 30px;
-}
-.program-info__item:nth-child(2) {
-    margin-bottom: 25px;
-}
-.program-info__item:nth-child(3) {
-    margin-bottom: 25px;
-}
-.program-info__item:nth-child(4) {
-    margin-bottom: 55px;
-}
-}
-.program-info__item::before {
-    content:"";
-    position: absolute;
-    left: -79px;
-    top: -1px;
-    min-width: 60px;
+.program-info__item--leaf span {
+    top: 0;
+    right: 220px;
+    width: 60px;
     height: 60px;
-    background-repeat: no-repeat;
-    background-position: 50% 50%;
 }
-.program-info--leaf::before {
-    background-image: url("../img/icon_leaf.svg");
+.program-info__item--tub span {
+    top: 0;
+    right: 220px;
+    width: 60px;
+    height: 60px;
 }
-.program-info--tub::before {
-    background-image: url("../img/icon_tub.svg");
+.program-info__item--eat span {
+    top: 0;
+    right: 220px;
+    width: 60px;
+    height: 60px;
 }
-.program-info--eat::before {
-    background-image: url("../img/icon_eat.svg");
+.program-info__item--alarm span {
+    top: 0;
+    right: 220px;
+    width: 60px;
+    height: 60px;
 }
-.program-info--alarm::before {
-    background-image: url("../img/icon_alarm.svg");
 }
-
 @media (min-width: @tablet-width) and (max-width: 1199px) {
     .program-info {
         margin-left: 35px;
@@ -70,6 +92,26 @@
         flex-wrap: wrap;
         margin-top: 40px;
     }
+    .program-info__item--leaf span {
+        top: 0;
+        width: 80px;
+        height: 80px;
+    }
+    .program-info__item--tub span {
+        top: 0;
+        width: 80px;
+        height: 80px;
+    }
+    .program-info__item--eat span {
+        top: 0;
+        width: 80px;
+        height: 80px;
+    }
+    .program-info__item--alarm span {
+        top: 0;
+        width: 80px;
+        height: 80px;
+    }
     .program-info__item {
         display: flex;
         flex-direction: column;
@@ -78,84 +120,36 @@
         width: 240px;
         height: 280px;
         position: relative;
-        left: 60px;
         text-align: start;
         padding-top: 130px;
         padding-left: 10px;
         padding-right: 30px;
         margin: 20px;
+        &:nth-child(2),
+        &:nth-child(4) {
+            left: 60px;
+        }
     }
-    .program-info__item:nth-child(1),
-    .program-info__item:nth-child(2) {
-        margin-bottom: 10px;
-    } 
-    .program-info__item:nth-child(1),
-    .program-info__item:nth-child(3) {
-        left: -30px;
-        top: 0;
-        bottom: 20px;
-        position: relative;
-    }
-    .program-info--leaf::before {
-        background-image: url("../img/icon_leaf.svg");
-        padding: 0;
-        margin: 0;
+    .program-info__item::after {
         position: absolute;
-        top: 30px;
-        left: 0;
+        font-size: 280px;
+        color: @greylight;
+        z-index: -1;
+        top: 60px;
+        right: 20px;
+        font-family: "Oswald";
     }
-    .program-info__item:first-child{
-        background-image: url("/img/plus/number1.svg");
-        background-color: @white;
-        background-repeat: no-repeat;
-        background-position-x: 100px;
-        background-position-y: 0px;
+    .program-info__item--leaf::after {
+        content: "1";
     }
-    .program-info--tub::before {
-        background-image: url("../img/icon_tub.svg");
-        padding: 0;
-        margin: 0;
-        position: absolute;
-        top: 30px;
-        left: 0;
+    .program-info__item--tub::after {
+        content: "2";
     }
-    .program-info__item:nth-child(2){
-        background-image: url("/img/plus/number2.svg");
-        background-color: @white;
-        background-repeat: no-repeat;
-        background-position-x: 130px;
-        background-position-y: 0px;
+    .program-info__item--eat::after {
+        content: "3";
     }
-    .program-info--eat::before {
-        background-image: url("../img/icon_eat.svg");
-        padding: 0;
-        margin: 0;
-        width: 20%;
-        position: absolute;
-        top: 30px;
-        left: 0px;
-    }
-    .program-info__item:nth-child(3){
-        background-image: url("/img/plus/number3.svg");
-        background-color: @white;
-        background-repeat: no-repeat;
-        background-position-x: 100px;
-        background-position-y: 0px;
-    }
-    .program-info--alarm::before {
-        background-image: url("../img/icon_alarm.svg");
-        padding: 0;
-        margin: 0;
-        position: absolute;
-        top: 30px;
-        left: 0px;
-    }
-    .program-info__item:nth-child(4){
-        background-image: url("/img/plus/number4.svg");
-        background-color: @white;
-        background-repeat: no-repeat;
-        background-position-x: 130px;
-        background-position-y: 0px;
+    .program-info__item--alarm::after {
+        content: "4";
     }
 }
 @media (min-width: @desktop-width) {
@@ -164,10 +158,31 @@
         margin: 0 auto;
         width: 100%;
     }
+    .program-info__item--leaf span {
+        top: 0;
+        width: 80px;
+        height: 80px;
+    }
+    .program-info__item--tub span {
+        top: 0;
+        width: 80px;
+        height: 80px;
+    }
+    .program-info__item--eat span {
+        top: 0;
+        width: 80px;
+        height: 80px;
+    }
+    .program-info__item--alarm span {
+        top: 0;
+        width: 80px;
+        height: 80px;
+    }
     .program-info__list {
         display: flex;
         flex-direction: row;
         flex-wrap: wrap;
+        list-style-type: none;
         justify-content: space-between;
         margin-left: 50px;
         
@@ -175,6 +190,7 @@
     .program-info__item {
         margin-top: 30px;
         padding-top: 100px;
+        position: relative;
         margin-bottom: 30px;
         max-width: 250px;
     }
@@ -185,24 +201,25 @@
         margin-top: 72px;
         line-height: 60px;
     }
-    .program-info--alarm::before {
-        background-image: url("../img/icon_alarm.svg");
+    .program-info__item::after {
         position: absolute;
-        left: 10px;
+        font-size: 280px;
+        color: @greylight;
+        z-index: -1;
+        top: 60px;
+        right: 20px;
+        font-family: "Oswald";
     }
-    .program-info--eat::before {
-        background-image: url("../img/icon_eat.svg");
-        position: absolute;
-        left: 10px;
+    .program-info__item--leaf::after {
+        content: "1";
     }
-    .program-info--tub::before {
-        background-image: url("../img/icon_tub.svg");
-        position: absolute;
-        left: 10px;
+    .program-info__item--tub::after {
+        content: "2";
     }
-    .program-info--leaf::before {
-        background-image: url("../img/icon_leaf.svg");
-        position: absolute;
-        left: 10px;
+    .program-info__item--eat::after {
+        content: "3";
+    }
+    .program-info__item--alarm::after {
+        content: "4";
     }
 }
